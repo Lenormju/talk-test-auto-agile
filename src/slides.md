@@ -14,13 +14,15 @@
 
 Julien Lenormand
 
-Jonathan Gaffiot
+Eric Papazian
 @ Kaizen Solutions
 
 <img src="./logo-kaizen.png" style="position: absolute; right: 500px; top: 500px; width: auto; height: auto" />
 
 Notes:
-* les différences entre nos 2 profils
+* notre carrière commune
+* prestation
+* industrie
 
 ---
 
@@ -52,60 +54,72 @@ Notes:
   * scrum is not enough
   * exemple du besoin de faire tester par des utilisateurs (game jam, ...) cf halway usability test
   * "tests that we dont have time to do"
+  * rôle et importance du QA
+  * première tache d'onboarding = faire un test, le faire passer en CI (ou la doc d'onboarding)
 
 10 idées :
-* avoir du code testable (testops) et architecture
-	* ACP : spy de test rendu possible
-	* Schneider : R2J
-	* SNCF : canva
-* outils adaptés
-	* Schneider : board farm et test système
-	* Jira
-	* CI
-	* RobotFramework ???
-* intégrer en amont : penser les tests dès le début et tout du long
-	* Example Mapping
-	* Architecture (cf au-dessus)
-	* EDF : Tres Amigos
-	* EDF, BDD
-    * loi de Conway
-* intégrer en aval : maitriser les défauts envoyés en production
-	* Schneider : rapport de maintenance
-	* Thales : logging, monitoring et observability
-* test fiable : fiabilité et maintenabilité des tests
-	* Schneirder : Eloise
-	* ACP : test de micro-services ("le système démarre")
-	* Schneider : historisation de la visu des tests (cc Pinjon) pour trouver les flaky
-* les tests c'est investissement
-	* continuer à scaler (temps, quantité de logiciel, taille d'équipe, tech, fréquence)
-	* sinon pente glissante
-	* schneider : procès (argent + temps), si on n'a pas de temps mort-mou pour réparer au fur et à mesure ça se dégrade
-	* Thales : Edge (démission)
-	* robot2jira
+1. avoir du code testable (testops) et architecture
+	* NOUS2: ACP : spy de test rendu possible
+	* JULIEN: Schneider : R2J
+	* JULIEN: SNCF : canva
+    * JULIEN: seam Michael Feathers
+2. outils adaptés : tooling et hardware (devices, RAM)
+	* ERIC: Schneider : board farm et test système
+	* ERIC: Jira
+	* ERIC: CI
+	* ERIC: RobotFramework ??? pas sûr
+    * JULIEN: Thales
+3. test fiable : fiabilité et maintenabilité des tests
+	* ERIC: Schneirder : Eloise
+	* JULIEN: ACP : test de micro-services ("le système démarre")
+	* ERIC: Schneider : historisation de la visu des tests (cc Pinjon) pour trouver les flaky
+4. intégrer en amont : penser les tests dès le début et tout du long
+	* ERIC: Example Mapping
+	* JULIEN: Architecture (cf au-dessus)
+	* JULIEN: EDF : Tres Amigos
+	* JULIEN: EDF, BDD
+    * JULIEN: loi de Conway, SCRUM is not enough
+5. intégrer en aval : maitriser les défauts envoyés en production
+	* ERIC: Schneider : rapport de maintenance
+	* JULIEN: Thales : logging, monitoring et observability
+6. les tests c'est investissement
+	* JULIEN: continuer à scaler (temps, quantité de logiciel, taille d'équipe, tech, fréquence)
+	* JULIEN: sinon pente glissante
+	* ERIC: client secret : procès (argent + temps), si on n'a pas de temps mort-mou pour réparer au fur et à mesure ça se dégrade
+	* JULIEN: Thales : Edge (démission)
+	* JULIEN: robot2jira
 	* dès le départ (moins cher à mettre en place, et rentables plus longtemps)
-* apprendre à apprendre : accelerate
-	* KPI (aussi cf podcast carrefour QE)
-	* DevOps et CI (robot2jira)
-	* Agile à la base
-		* en rétro, décider de re-prioriser les tests ou la CI
-* tester au bon niveau : pyramide ! (quadrants ?)
-	* Schneider : test au niveau end-to-end sur hardware
-	* ACP : IMP unit, composant (microservice), système, prototype
-	* mais la plupart du temps, les pyramides sont foirées
-	* cf vélocité
-* écouter ses tests : feedback, rapidité, itérativité
-	* si les features sont de plus en plus lentes ou difficiles à produire, ça casse l'itérativité
-	* rapide à écrire, à lancer
-	* robot2jira: end-to-end 2 minutes
-	* schneider : nightly
-* respecter les limites : ROI
+7. tester au bon niveau : pyramide ! (quadrants ?)
+	* ERIC: Schneider : test au niveau end-to-end sur hardware
+	* JULIEN: ACP : IMP unit, composant (microservice), système, prototype
+	* JULIEN: mais la plupart du temps, les pyramides sont foirées
+	* transition vélocité
+8. écouter ses tests : feedback, rapidité, itérativité, confiance d'aller vite
+	* ERIC: si les features sont de plus en plus lentes ou difficiles à produire, ça casse l'itérativité
+	* NOUS2: rapide à écrire, à lancer
+	* JULIEN: robot2jira: end-to-end 2 minutes
+	* ERIC: schneider : nightly, iso
+9. apprendre à apprendre : accelerate
+	* JULIEN: Accelerate & KPI (aussi cf podcast carrefour QE)
+	* JULIEN: DevOps et CI (robot2jira)
+	* ERIC: Agile à la base (la joie des deadlines ?)
+		* ERIC: en rétro, décider de re-prioriser les tests ou la CI
+10. respecter les limites : ROI
 	* choses difficiles à tester
-	* ergonomie UX
-	* UI
-	* cyber
-	* projets 3 mois d'Eric en école : trop compliqué, donc manuel (coût d'apprentissage, de mise en place, code jetable ou POC)
-* culture et ?????
-* rôle et importance du QA
+	* JULIEN: UI/UX ergonomie
+	* ERIC: cyber
+	* ERIC: projets 3 mois d'Eric en école : trop compliqué, donc manuel (coût d'apprentissage, de mise en place, code jetable ou POC)
+    * JULIEN: test Kor
+Conclusion :
+* le test, grand oublié tout court
+* rendre le test "agile" (appliquer l'agilité au test et au testeur), donc gagner en qualité et rapidité
+  * abstract
+* reprendre le manifeste agile, et remplacer le mot "dev" par "test"
+    * Individuals and interactions over processes and tools
+    * Working TEST over comprehensive JIRA
+    * Dev-Test collaboration over {je passe le ticket au prochain, bon courage}
+    * Responding to change over following a TEST plan
+* le test comme moteur de la boucle de feedback : les tests agiles sont les tests autos, au lieu de les faire après on les fait en même temps, on itère
 -->
 
 # Idée n°1
