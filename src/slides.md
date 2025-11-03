@@ -51,6 +51,7 @@ Notes:
   * disposer d'un rapport de maintenance pour le debug, mais aussi pour les tests (shift right), flux du feeback des bugs inverse à celui des features
   * scrum is not enough
   * exemple du besoin de faire tester par des utilisateurs (game jam, ...) cf halway usability test
+  * "tests that we dont have time to do"
 
 10 idées :
 * avoir du code testable (testops) et architecture
@@ -67,6 +68,7 @@ Notes:
 	* Architecture (cf au-dessus)
 	* EDF : Tres Amigos
 	* EDF, BDD
+    * loi de Conway
 * intégrer en aval : maitriser les défauts envoyés en production
 	* Schneider : rapport de maintenance
 	* Thales : logging, monitoring et observability
