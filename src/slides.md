@@ -57,61 +57,119 @@ Notes:
   * rôle et importance du QA
   * première tache d'onboarding = faire un test, le faire passer en CI (ou la doc d'onboarding)
   * pair testing
+-->
 
-10 idées :
-1. avoir du code testable (testops) et architecture
-	* NOUS2: ACP : spy de test rendu possible
-	* JULIEN: Schneider : R2J
-	* JULIEN: SNCF : canva
-    * JULIEN: seam Michael Feathers
-2. outils adaptés : tooling et hardware (devices, RAM)
-	* ERIC: Schneider : board farm et test système
-	* ERIC: Jira
-	* ERIC: CI
-	* ERIC: RobotFramework ??? pas sûr
-    * JULIEN: Thales
-3. test fiable : fiabilité et maintenabilité des tests
-	* ERIC: Schneirder : Eloise
-	* JULIEN: ACP : test de micro-services ("le système démarre")
-	* ERIC: Schneider : historisation de la visu des tests (cc Pinjon) pour trouver les flaky
-4. intégrer en amont : penser les tests dès le début et tout du long
-	* ERIC: Example Mapping
-	* JULIEN: Architecture (cf au-dessus)
-	* JULIEN: EDF : Tres Amigos
-	* JULIEN: EDF, BDD
-    * JULIEN: loi de Conway, SCRUM is not enough
-5. intégrer en aval : maitriser les défauts envoyés en production
-	* ERIC: Schneider : rapport de maintenance
-	* JULIEN: Thales : logging, monitoring et observability
-6. les tests c'est investissement
-	* JULIEN: continuer à scaler (temps, quantité de logiciel, taille d'équipe, tech, fréquence)
-	* JULIEN: sinon pente glissante
-	* ERIC: client secret : procès (argent + temps), si on n'a pas de temps mort-mou pour réparer au fur et à mesure ça se dégrade
-	* JULIEN: Thales : Edge (démission)
-	* JULIEN: robot2jira
-	* dès le départ (moins cher à mettre en place, et rentables plus longtemps)
-7. tester au bon niveau : pyramide ! (quadrants ?)
-	* ERIC: Schneider : test au niveau end-to-end sur hardware
-	* JULIEN: ACP : IMP unit, composant (microservice), système, prototype
-	* JULIEN: mais la plupart du temps, les pyramides sont foirées
-	* transition vélocité
-8. écouter ses tests : feedback, rapidité, itérativité, confiance d'aller vite
-	* ERIC: si les features sont de plus en plus lentes ou difficiles à produire, ça casse l'itérativité
-	* NOUS2: rapide à écrire, à lancer
-	* JULIEN: robot2jira: end-to-end 2 minutes
-	* ERIC: schneider : nightly, iso
-9. apprendre à apprendre : accelerate
-	* JULIEN: Accelerate & KPI (aussi cf podcast carrefour QE)
-	* JULIEN: DevOps et CI (robot2jira)
-	* ERIC: Agile à la base (la joie des deadlines ?)
-		* ERIC: en rétro, décider de re-prioriser les tests ou la CI
-10. respecter les limites : ROI
-	* choses difficiles à tester
-	* JULIEN: UI/UX ergonomie
-	* ERIC: cyber
-	* ERIC: projets 3 mois d'Eric en école : trop compliqué, donc manuel (coût d'apprentissage, de mise en place, code jetable ou POC)
-    * JULIEN: test Kor
-Conclusion :
+# TODO : 1. avoir du code testable (testops) et architecture
+
+Notes:
+* NOUS2: ACP : spy de test rendu possible
+* JULIEN: Schneider : R2J
+* JULIEN: SNCF : canva
+* JULIEN: seam Michael Feathers
+
+-v-
+
+## Sous-idée n°1
+
+---
+
+# TODO: 2. outils adaptés : tooling et hardware (devices, RAM)
+
+Notes:
+* ERIC: Schneider : board farm et test système
+* ERIC: Jira
+* ERIC: CI
+* ERIC: RobotFramework ??? pas sûr
+* JULIEN: Thales
+
+---
+
+# TODO: 3. test fiable : fiabilité et maintenabilité des tests
+
+Notes:
+* ERIC: Schneirder : Eloise
+* JULIEN: ACP : test de micro-services ("le système démarre")
+* ERIC: Schneider : historisation de la visu des tests (cc Pinjon) pour trouver les flaky
+
+---
+
+# TODO: 4. intégrer en amont : penser les tests dès le début et tout du long
+
+Notes:
+* ERIC: Example Mapping
+* JULIEN: Architecture (cf au-dessus)
+* JULIEN: EDF : Tres Amigos
+* JULIEN: EDF, BDD
+* JULIEN: loi de Conway, SCRUM is not enough
+
+---
+
+# TODO: 5. intégrer en aval : maitriser les défauts envoyés en production
+
+Notes:
+* ERIC: Schneider : rapport de maintenance
+* JULIEN: Thales : logging, monitoring et observability
+
+---
+
+# TODO: 6. les tests c'est investissement
+
+Notes:
+* JULIEN: continuer à scaler (temps, quantité de logiciel, taille d'équipe, tech, fréquence)
+* JULIEN: sinon pente glissante
+* ERIC: client secret : procès (argent + temps), si on n'a pas de temps mort-mou pour réparer au fur et à mesure ça se dégrade
+* JULIEN: Thales : Edge (démission)
+* JULIEN: robot2jira
+* dès le départ (moins cher à mettre en place, et rentables plus longtemps)
+
+---
+
+# TODO: 7. tester au bon niveau : pyramide ! (quadrants ?)
+
+Notes:
+* ERIC: Schneider : test au niveau end-to-end sur hardware
+* JULIEN: ACP : IMP unit, composant (microservice), système, prototype
+* JULIEN: mais la plupart du temps, les pyramides sont foirées
+* transition vélocité
+
+---
+
+# TODO: 8. écouter ses tests : feedback, rapidité, itérativité, confiance d'aller vite
+
+Notes:
+* ERIC: si les features sont de plus en plus lentes ou difficiles à produire, ça casse l'itérativité
+* NOUS2: rapide à écrire, à lancer
+* JULIEN: robot2jira: end-to-end 2 minutes
+* ERIC: schneider : nightly, iso
+
+---
+
+# TODO: 9. apprendre à apprendre : accelerate
+
+Notes:
+* JULIEN: Accelerate & KPI (aussi cf podcast carrefour QE)
+* JULIEN: DevOps et CI (robot2jira)
+* ERIC: Agile à la base (la joie des deadlines ?)
+    * ERIC: en rétro, décider de re-prioriser les tests ou la CI
+
+---
+
+# TODO: 10. respecter les limites : ROI
+
+Notes:
+* choses difficiles à tester
+* JULIEN: UI/UX ergonomie
+* ERIC: cyber
+* ERIC: projets 3 mois d'Eric en école : trop compliqué, donc manuel (coût d'apprentissage, de mise en place, code jetable ou POC)
+* JULIEN: test Kor
+
+---
+
+# Conclusion
+
+* TODO
+
+Notes:
 * le test, grand oublié tout court
 * rendre le test "agile" (appliquer l'agilité au test et au testeur), donc gagner en qualité et rapidité
   * abstract
@@ -121,19 +179,6 @@ Conclusion :
     * Dev-Test collaboration over {je passe le ticket au prochain, bon courage}
     * Responding to change over following a TEST plan
 * le test comme moteur de la boucle de feedback : les tests agiles sont les tests autos, au lieu de les faire après on les fait en même temps, on itère
--->
-
-# Idée n°1
-
--v-
-
-## Sous-idée n°1
-
----
-
-# Conclusion
-
-* TODO
 
 ---
 
@@ -146,7 +191,7 @@ Conclusion :
 # Crédits photos
 
 * TODO
-* Photo by [Степана](https://unsplash.com/@sgalagaev>Ансплэш) on [Unsplash](https://unsplash.com/photos/brown-rabbit-on-window-during-daytime--5iSCtrJX5o)
+* Photo "Brown rabbit on window during daytime" by [Степана](https://unsplash.com/@sgalagaev>Ансплэш) on [Unsplash](https://unsplash.com/photos/brown-rabbit-on-window-during-daytime--5iSCtrJX5o)
 
 ---
 
