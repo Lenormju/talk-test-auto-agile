@@ -56,6 +56,7 @@ Notes:
   * "tests that we dont have time to do"
   * rôle et importance du QA
   * première tache d'onboarding = faire un test, le faire passer en CI (ou la doc d'onboarding)
+  * pair testing
 
 10 idées :
 1. avoir du code testable (testops) et architecture
