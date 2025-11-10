@@ -76,10 +76,12 @@ Notes:
 # TODO: 2. outils adaptés : tooling et hardware (devices, RAM)
 
 Notes:
-* ERIC: Schneider : board farm et test système
-* ERIC: Jira
-* ERIC: CI
-* ERIC: RobotFramework ??? pas sûr
+* ERIC
+  * faire une slide avec images matériels etc
+  * le DUT / du matériel -> les bornes, tests systèmes, des simus (hardware ou soft)
+  * un outil de gestion -> Jira (?)
+  * des moyens d'automatisation -> boardfarm, CI
+  * un framework de test -> RobotFramework (?)
 * JULIEN: Thales
 
 ---
@@ -87,16 +89,19 @@ Notes:
 # TODO: 3. test fiable : fiabilité et maintenabilité des tests
 
 Notes:
-* ERIC: Schneirder : Eloise
+* ERIC: 
+  * faire une slide avec rf historic + graphes de tests qui passent qui fluctue
+  * raconter anecdote tests à schneider
+  * mettre des efforts pour la maintenance afin d'avoir peu de tests qui échouent pour permettre l'analyse rapide de la non régression
+  * historisation de la visu des tests (cc Pinjon) pour trouver les flaky
 * JULIEN: ACP : test de micro-services ("le système démarre")
-* ERIC: Schneider : historisation de la visu des tests (cc Pinjon) pour trouver les flaky
 
 ---
 
 # TODO: 4. intégrer en amont : penser les tests dès le début et tout du long
 
 Notes:
-* ERIC: Example Mapping
+* ERIC: Example Mapping + slide explicative
 * JULIEN: Architecture (cf au-dessus)
 * JULIEN: EDF : Tres Amigos
 * JULIEN: EDF, BDD
@@ -107,7 +112,7 @@ Notes:
 # TODO: 5. intégrer en aval : maitriser les défauts envoyés en production
 
 Notes:
-* ERIC: Schneider : rapport de maintenance
+* ERIC: rapport de maintenance: utile pour les devs, pour les testeurs, pour le support, pour le client + slide 
 * JULIEN: Thales : logging, monitoring et observability
 
 ---
@@ -117,7 +122,7 @@ Notes:
 Notes:
 * JULIEN: continuer à scaler (temps, quantité de logiciel, taille d'équipe, tech, fréquence)
 * JULIEN: sinon pente glissante
-* ERIC: client secret : procès (argent + temps), si on n'a pas de temps mort-mou pour réparer au fur et à mesure ça se dégrade
+* ERIC: procès (argent + temps), si on n'a pas de temps mort-mou pour réparer au fur et à mesure ça se dégrade
 * JULIEN: Thales : Edge (démission)
 * JULIEN: robot2jira
 * dès le départ (moins cher à mettre en place, et rentables plus longtemps)
@@ -127,7 +132,7 @@ Notes:
 # TODO: 7. tester au bon niveau : pyramide ! (quadrants ?)
 
 Notes:
-* ERIC: Schneider : test au niveau end-to-end sur hardware
+* ERIC: ex mauvaise répartition à cause de l'architecture du projet = trop de tests end-to-end sur hardware => perte de performance (un test = 5 min d'exec au lieu de 30s)
 * JULIEN: ACP : IMP unit, composant (microservice), système, prototype
 * JULIEN: mais la plupart du temps, les pyramides sont foirées
 * transition vélocité
@@ -137,10 +142,13 @@ Notes:
 # TODO: 8. écouter ses tests : feedback, rapidité, itérativité, confiance d'aller vite
 
 Notes:
-* ERIC: si les features sont de plus en plus lentes ou difficiles à produire, ça casse l'itérativité
+* ERIC: 
+  * faire slide
+  * développement de l'iso est plus rapide grace au nightly + confiance d'avancer (même si on connait pas tout le produit, on a un garde fou eg: timeout iec)
+  * si les features sont de plus en plus lentes ou difficiles à produire, ça casse l'itérativité
 * NOUS2: rapide à écrire, à lancer
 * JULIEN: robot2jira: end-to-end 2 minutes
-* ERIC: schneider : nightly, iso
+
 
 ---
 
@@ -149,8 +157,9 @@ Notes:
 Notes:
 * JULIEN: Accelerate & KPI (aussi cf podcast carrefour QE)
 * JULIEN: DevOps et CI (robot2jira)
-* ERIC: Agile à la base (la joie des deadlines ?)
-    * ERIC: en rétro, décider de re-prioriser les tests ou la CI
+* ERIC: apprendre = la base de l'agilité
+    * en rétro, décider de re-prioriser les tests ou la CI
+    * avant de développer, commencer par le projet à partir de ses tests
 
 ---
 
@@ -159,8 +168,10 @@ Notes:
 Notes:
 * choses difficiles à tester
 * JULIEN: UI/UX ergonomie
-* ERIC: cyber
-* ERIC: projets 3 mois d'Eric en école : trop compliqué, donc manuel (coût d'apprentissage, de mise en place, code jetable ou POC)
+* ERIC: cyber (c'était quoi qu'on voulait dire par cyber déjà?)
+* ERIC: 
+  * projet web dev, 6 mois en école : trop compliqué, donc manuel (coût d'apprentissage, de mise en place, code jetable ou POC)
+  * puis automatisation après lorsqu'on se rend compte qu'on veut le maintenir sur la durée
 * JULIEN: test Kor
 
 ---
