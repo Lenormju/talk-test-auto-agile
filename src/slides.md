@@ -12,11 +12,12 @@
 
 # Le test, grand oublié de l'Agilité ?
 
+Notes:
+* TODO ERIC: idée de meilleure illustration pour la slide de titre ?
+
 ---
 
-## Merci aux sponsors
-
-TODO sponsors Agile Grenoble
+<!-- .slide: data-background-image="./Agile Grenoble - slide sponsor 2025-11-15.png" -->
 
 Notes:
 * TODO sponsors Agile Genève
@@ -38,14 +39,14 @@ Notes:
 
 Julien Lenormand
 
-<img src="./julien_lenormand_logo.png" alt="" width="700px" style="margin-top: 200px" />
+<img src="./julien_lenormand_logo.png" alt="" width="786" style="margin-top: 200px" />
 
 </div>
 <div class="column">
 
 Eric Papazian
 
-<img src="./logo-kaizen.png" alt="" width="700px" />
+<img src="./logo-kaizen.png" alt="" width="567" />
 
 </div>
 </div>
@@ -60,6 +61,8 @@ Notes:
 <!-- .slide: data-background-image="./jerry-kavan-vv-oEGlN-4E-unsplash.jpg" -->
 
 # Introduction : objectifs
+
+<img src="./Top_Ten_Logo.jpg" class="r-stretch" alt="" />  <!-- .element: class="fragment" -->
 
 ---
 
@@ -311,29 +314,59 @@ Notes:
 
 ---
 
-# TODO: 9. Apprendre à apprendre : DORA
+<!-- .slide: data-background-image="./road-trip-with-raj-o4c2zoVhjSw-unsplash.jpg" -->
+
+# 9. Apprendre
+
+-v-
+
+## Agilité
 
 Notes:
-* JULIEN: DORA, Accelerate & KPI (aussi cf podcast carrefour QE)
-* JULIEN: DevOps et CI (robot2jira)
-* ERIC: apprendre = la base de l'agilité
+* TODO: image
+* ERIC: apprendre = la base de l'agilité (3ème mot du manifeste : "uncovering")
     * en rétro, décider de re-prioriser les tests ou la CI
     * avant de développer, commencer par le projet à partir de ses tests
 
----
+-v-
 
-# TODO: 10. respecter les limites : ROI
+## DORA
+
+<img src="./Dora_the_Explorer_(4844562834).jpg" class="r-stretch" alt="" />
 
 Notes:
-* choses difficiles à tester
-* JULIEN: UI/UX ergonomie
-* ERIC: cyber (c'était quoi qu'on voulait dire par cyber déjà?)
-* ERIC: 
-  * projet web dev, 6 mois en école : trop compliqué, donc manuel (coût d'apprentissage, de mise en place, code jetable ou POC)
-  * puis automatisation après lorsqu'on se rend compte qu'on veut le maintenir sur la durée
-* JULIEN: test Kor
+* JULIEN: j'ai découvert il y a quelques années Accelerate, le livre édité par le DevOps Research and Assessment group (DORA). Bien qu'il se concentre sur le DevOps, il répondait à beaucoup de limitations que je vois dans le Manifeste Agile : quelles sont les bonnes pratiques ? Comment convaincre de l'utilité de les mettre en place ?
+* JULIEN: Depuis, DORA a été intégré à Google, et propose non pas un framework mais un ensemble de Metrics de performance et de Capabilites. Les tests et leur automatisation sont alors largement recommandés. Et les KPI proposés sont vraiment bien je trouve.
+* JULIEN: Une bonne partie de notre discours dans ce talk, ça s'inscrit dans la "culture organisationnelle générative (au sens du Dr. Ron Westrum)", à l'inverse de cultures bureaucratiques ou pathologiques.
+* JULIEN: D'expérience, le DevOps c'est archi-important, j'en ai fait ma spécialisation. Et sur tous les projets où je suis passé, j'ai essayé de mettre en place ce qui pouvait l'être : un environnement local efficace, une CI de confiance, une prod domptée.
 
 ---
+
+<!-- .slide: data-background-image="./glenn-villas-Z5jO59eYuqM-unsplash.jpg" -->
+
+# 10. Estimer le ROI
+
+-v-
+
+## Difficile de tester
+
+Notes:
+* TODO JULIEN: UI/UX ergonomie
+* TODO ERIC: tests de cybersécurité, encore principalement manuels (audits, pentesters, analyse des remontées), l'outillage auto commence à apparaître, et l'IA émerge
+
+-v-
+
+## Tant pis (pour le moment)
+
+Notes:
+* JULIEN: du code legacy difficile à tester en auto, beaucoup de retard, besoin urgent de mettre en prod : pas le choix, on va tester manuellement un peu, et croiser les doigts (et serrer les fesses)
+* TODO ERIC: 
+  * projet web dev, 6 mois en école : trop compliqué, donc manuel (coût d'apprentissage, de mise en place, code jetable ou POC)
+  * puis automatisation après lorsqu'on se rend compte qu'on veut le maintenir sur la durée
+
+---
+
+<!-- .slide: data-background-image="./markus-spiske-j2s9TffBQLk-unsplash.jpg" -->
 
 # Conclusion
 
@@ -355,10 +388,11 @@ Notes:
 # Pour aller + loin
 
 * TODO
-* TODO Ifttd 327 + exe
-* podcast QE
-* podcast Opiniated de Dev Expe
-* [Talk par Arnaud Langlade sur l'Example Mapping](https://www.youtube.com/watch?v=0Qlx7q1-GZA)
+* [DORA Core Model](https://dora.dev/research/?view=detail)
+* [[Talk]: Arnaud Langlade - Example Mapping](https://www.youtube.com/watch?v=0Qlx7q1-GZA)
+* [[Podcast] If This Then Dev #327 - Fiabiliser l'usine logicielle, avec Geoffrey Berard](https://www.ifttd.io/episodes/fiabiliser-l-usine-logicielle) + sa version compilée "#327.exe" avec Louis Pinsard
+* [[Podcast] Developer Experience Opionated #3 - Comment penser les tests logiciels en 2025, avec Antoine Craske](https://podcast.ausha.co/developer-experience/antoine-craske)
+* [[Podcast] QG Qualité - Le QE Score chez Carrefour, avec Simon Champenois](https://www.ssid.fr/qe-score/)
 
 ---
 
@@ -398,7 +432,12 @@ Notes:
 * Photo of inverted pyramid by <a href="https://unsplash.com/@sherlocke">Helen Browne</a> on <a href="https://unsplash.com/photos/modernist-building-with-a-unique-inverted-pyramid-design-0cw5y0iW490">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
 <!-- 8. feedback -->
 <!-- 9. DORA -->
+* Photo of Spider-man reading by <a href="https://unsplash.com/@roadtripwithraj">Road Trip with Raj</a> on <a href="https://unsplash.com/photos/spider-man-leaning-on-concrete-brick-while-reading-book-o4c2zoVhjSw">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+* ["Dora the Explorer" by Håkan Dahlström on Wikimedia Commons (CC-BY 2.0)](https://commons.wikimedia.org/wiki/File:Dora_the_Explorer_(4844562834).jpg)
 <!-- 10. ROI -->
+* Photo of a "stop sign" by <a href="https://unsplash.com/@glennvillas">Glenn Villas</a> on <a href="https://unsplash.com/photos/a-red-off-limit-sign-hanging-from-a-rope-Z5jO59eYuqM">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+<!-- 10. Conclusion -->
+* Photo of "end" word by <a href="https://unsplash.com/@markusspiske">Markus Spiske</a> on <a href="https://unsplash.com/photos/text-j2s9TffBQLk">Unsplash</a>
 <!-- cute bonus -->
 * Photo of a rabbit by [Степана](https://unsplash.com/@sgalagaev>Ансплэш) on [Unsplash](https://unsplash.com/photos/brown-rabbit-on-window-during-daytime--5iSCtrJX5o) (<a href="https://unsplash.com/license">Free licence</a>)
 
