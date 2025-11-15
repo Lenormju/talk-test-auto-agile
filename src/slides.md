@@ -59,17 +59,45 @@ Notes:
   * pair testing
 -->
 
-# TODO : 1. avoir du code testable (testops) et architecture
+# 1. Code testable et architecture testable
 
 Notes:
-* NOUS2: ACP : spy de test rendu possible
-* JULIEN: Schneider : R2J
-* JULIEN: SNCF : canva
-* JULIEN: seam Michael Feathers
+* TODO: image d'une forteresse ? de briques qui ne s'embriquent pas ? de quelque chose d'opaque ?
 
 -v-
 
-## Sous-idée n°1
+## Permettre la testabilité
+
+Notes:
+* JULIEN: Eric et moi nous ommes rencontré sur une mission il y a 3 ans, un projet de micro-services, moi côté dev, lui côté IVVQ (Valid/Verif/QA). On était sur du bon vieux silo : dans mon équipe on essayait de développer des trucs, on lui livrait le bousin, et eux devaient se débrouiller pour réussir à les configurer, lancer, instrumenter, et finalement tester. Si l'on ne prenait en compte que nos spécifications (fonctionnelles), on devait lui livrer quelque chose de sécurisé, sur lequel on ne peut pas se brancher, donc pas vraiment moyen de tester.
+  * TODO ERIC: Julien a plus en tête les détails du spy, c'était une histoire de MITM ?
+* JULIEN: Mais je voyais bien que ce qu'on allait leur livrer serait difficile voire impossible à tester (on avait déjà du mal nous). Je suis donc allé voir Eric, que je ne connaissais pas encore, et on a parlé. Que pouvais-je prendre en compte dans ma conception et mon implémentation pour lui faciliter la vie ?
+* JULIEN: Là j'ai du aller parler à un autre être humain pour faire de meilleurs choix, mais souvent c'est avec notre nous du futur qu'il faut discuter des besoins de test, et prévoir dès aujourd'hui le code pour.
+  * TODO JULIEN: intégrer Eric à ce discours
+
+-v-
+
+## Ou bien ne pas pouvoir tester
+
+Notes:
+* TODO JULIEN: faire une image
+* JULIEN : là c'était un exemple de quand ça se passe bien, parce qu'on a pu discuter, prendre en compte les besoins. Quand ça ne l'est pas, on se retrouve parfois au pied du mur. J'ai été sur une mission d'automatisation de test, bien après que l'application ait été developpée. Il y avait des cas de test prévus pour des humains, et qui consistaient à cliquer sur des zones interactives d'une image (un canva). Autant c'était simple humainement de le faire, autant écrire un script équivalent s'est montré bien trop compliqué. Il aurait fallu ajouter des ids de test, des métadonnées, ou un bypass, ... peu importe, mais une façon qui permettait de ne pas avoir à développer un modèle de vision customisé.
+
+-v-
+
+## La testabilité est une feature
+
+Notes:
+* TODO JULIEN: image de journal de bord
+* JULIEN: sur une autre mission, j'avais initié une refonte d'une petite application, dont le but principal était de lire et écrire sur une API tierce (qu'on ne controle pas, et qui est lent et peu fiable). Beaucoup de side-effects. Pour faciliter la testabilité, j'aurais pu découpler mon pipeline des interactions avec le serveur. Mais j'aurais été obligé de développer un fake, ce qui aurait posé d'autres problèmes. J'ai donc adapté ma conception : l'intention et le résultat de chaque interaction avec le serveur était consigné dans un journal, qui permettait lors des tests d'identifier efficacement ce qui s'était passé, et ce qui n'était pas normal. Et ça aidait énormément pour dépanner les erreurs en prod ensuite. J'ai pris en compte la testabilité dans le design, ce qui a ouvert la voie à des features différentes.
+
+-v-
+
+## Quelques notions
+
+Notes:
+* TODO JULIEN: image de testops, de ligne de faille et de couture
+* JULIEN: si vous voulez creuser un peu, je vous invite à regarder la notion de TestOps (l'équivalent du DevOps pour le testing), ou la notion de "seams" de Michael Feathers dans Testing Legacy Software (identifier/créer des coutures/lignes de faille dans nos architectures).
 
 ---
 
@@ -98,14 +126,57 @@ Notes:
 
 ---
 
-# TODO: 4. intégrer en amont : penser les tests dès le début et tout du long
+# 4. Tests everything, everywhere, all at once
 
 Notes:
-* ERIC: Example Mapping + slide explicative
-* JULIEN: Architecture (cf au-dessus)
-* JULIEN: EDF : Tres Amigos
-* JULIEN: EDF, BDD
-* JULIEN: loi de Conway, SCRUM is not enough
+* TODO JULIEN: image du film (femme qui fait des arts martiaux ?)
+
+-v-
+
+## Le test est un besoin
+
+Notes:
+* TODO JULIEN: image de mains à l'unisson (Yugioh ? :D)
+* JULIEN: C'est quand à la toute fin qu'on veut écrire des tests, qu'on se rend compte que ce n'est pas si simple en fait ... Ah, si seulement on y avait pensé plus tôt ! Justement : le test est un besoin au niveau projet. Certes, pas un besoin utilisateur, mais un pré-requis pour pouvoir amener des solutions aux besoins clients.
+* TODO JULIEN: remettre une couche de TestOps ici ? (évoqué comme "à creuser" dans la partie 1)
+
+-v-
+
+## Tres amigos
+
+Notes:
+* TODO JULIEN: image de troix mexicains ?
+* Julien: est-ce que vous connaissez les "tres amigos" ? PO, Dev et QA. Autrement dit : besoin client, solution technique, regard qualité et critique sur l'adéquation entre les deux. Car les QA/testeurs/... sont idalement placés à cheval entre les deux mondes, et avec un regard critique sur chacun, pour apporter une vision éclairée sur les discussions.
+* JULIEN: je parle d'expérience, même en ayant une sensibilité test et QA pas commune chez les devs, je reste un dev. Quand on me parle problème, j'ai souvent comme premier réflexe de foncer côté solution. Alors qu'un QA n'aura pas ce biais (et même au contraire voudrait bien avoir moins de code à tester !). Dans une mission, autant que possible on embarquait la personne QA de l'équipe, car elle amenait toujours un regard différent de celui PO/BA et Dev. Et les QA sont très bons pour penser en amont aux cas tordus, aux interactions imprévues entre les features, ...
+
+-v-
+
+## Example Mapping
+
+Notes:
+* TODO Julien: image d'example mapping (en faire une moi-même ?)
+* TODO ERIC: quoi dire dans cette section ? recommander le replay d'Alpes Craft ?
+
+-v-
+
+## Behavior-Driven Development
+
+Notes:
+* TODO Julien: image d'exemple de test en BDD
+* JULIEN: on peut aussi recourir au BDD. Pas grand chose à voir avec les BDD (bases de données), le TDD ni le DDD, le Behavior-Driven Development consiste à rédiger des cas de test en langage humain et métier (si on considère que les humains parlent le Gherkin), lesquels pourront être exécutés automatiquement par un outil (Cucumber, Gherkin et autres variations sur le thème des concombres et des cornichons).
+* JULIEN: Côté avantages, cela permet aux PO/BA de rédiger et comprendre les cas de test, d'avoir une compréhension fine des impacts de "tests qui ne passent pas". Et ce genre de tests est souvent très utile pour comprendre ce que fait l'application. Et robuste aux refactoring (côté rédaction).
+* JULIEN: mais il y a des désavantages. Si ce ne sont pas les PO/BA/QA qui rédigent les cas de test, mais les devs, ça peut être très fastidieux comparé à utiliser les frameworks habituels des devs. Et il y a étape de conversion entre le cas de test et son implémentation en code qui peut être messy, au détriment des devs. Une solution intermédiaire c'est de répliquer la verbosité dans le framework des devs, mais ça demande de la rigueur.
+* JULIEN: j'ai connu des équipes qui adorent, d'autres qui détestent, donc à voir selon le contexte (comme d'habitude, il n'y a pas de "best practices").
+* TODO Julien: demander slides de la conf du DevFest Toulouse sur les events
+
+-v-
+
+## Le danger de la Loi de Conway
+
+Notes:
+* TODO JULIEN: image de board Kanban ou la faire moi-même
+* JULIEN: je n'ai pas relu toutes les versions du Guide Scrum, mais il n'y est pas fait mention de Kanban. Et surtout, quelles colonnes mettre dans son Kanban ? Moi j'aime bien TODO/DOING/DONE. Car ça met l'emphase sur ce qui est EN COURS et ce qui est TERMINÉ. Et très simple de mettre une WIP-Limit. Mais souvent on va mettre plein de colonnes, pour décrire toutes les étapes de la production. Effectivement, ça permet de meixu voir le degré d'avancement des tickets. Mais qu'il y ait besoin de granularité dans l'avancement ça suppose que ces tickets sont longs à réaliser (premier red flag pour moi). Et qu'il y ait besoin d'avoir des étapes différentes, c'est souvent le signe que différentes personnes sont requises pour la traversée. Et que la responsabilité est divisée (donc personne n'est responsabla, aka chat perché). Et donc on découpe en fonction des personnes, on crée des silos. Pour moi, c'est un anti-pattern, qu'il faut combattre.
+* JULIEN: la Loi de Conway, c'est que "les organisations qui designent des systèmes sont forcées de produire des designs qui sont des copies des structures de communication de ces organisations". Autrement dit, si j'ai une équipe Frontend, une équipe Backend, et une équipe Base de Données, qu'importe le besoin, la solution aura la forme Frontend/Backend/Base de données. Ce qui est un énorme biais. Il faut donc penser les structures d'une organisation pour influer positivement sur les systèmes. D'où les "feature teams" : une équipe pluri-disciplinaire, indivisible, en charge de la réalisation bout-en-bout des solutions aux besoins métiers. On dirait la définition du Scrum Guide ! On ne devrait pas chercher à créer des verticales dans un kanban, mais des horizontales. 
 
 ---
 
@@ -148,7 +219,6 @@ Notes:
   * si les features sont de plus en plus lentes ou difficiles à produire, ça casse l'itérativité
 * NOUS2: rapide à écrire, à lancer
 * JULIEN: robot2jira: end-to-end 2 minutes
-
 
 ---
 
