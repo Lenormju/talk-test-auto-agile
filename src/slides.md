@@ -223,7 +223,7 @@ Notes:
 
 <!-- .slide: data-background-image="./OVH-en-flammes.jpg" -->
 
-# Maitriser les défauts envoyés en production
+# 5. Maitriser les défauts envoyés en production
 
 -v-
 
@@ -246,27 +246,55 @@ Notes:
 
 ---
 
-# TODO: 6. les tests c'est investissement
+<!-- .slide: data-background-image="./jp-valery-lVFoIi3SJq8-unsplash.jpg" -->
+
+# 6. Investir dans les tests autos
 
 Notes:
-* JULIEN: continuer à scaler (temps, quantité de logiciel, taille d'équipe, tech, fréquence)
-* JULIEN: sinon pente glissante
-* ERIC: procès (argent + temps), si on n'a pas de temps mort-mou pour réparer au fur et à mesure ça se dégrade
-* JULIEN: Thales : Edge (démission)
-* JULIEN: robot2jira
-* dès le départ (moins cher à mettre en place, et rentables plus longtemps)
+* JULIEN: comme beaucoup de choses, c'est une question d'argent. Effectivement, implémenter et maintenir des tests autos ça coûte de l'argent. Mais ne pas les implémenter ou les maintenir, c'est faire le choix soit de payer du test manuel fréquent et large, soit de prendre le risque de ne pas tester. Eric, tu aurais une anecdote sur le fait de ne pas tester ?
+* TODO ERIC: anecdote procès
+
+-v-
+
+## Scaling
+
+<img src="./tine-ivanic-u2d0BPZFXOY-unsplash.jpg" class="r-stretch" alt="" />
+
+Notes:
+* JULIEN: 8ème principe du Manifeste Agile :
+* JULIEN: Les processus agiles encouragent à respecter un rythme soutenable lors de la réalisation. Les commanditaires, les réalisateurs et les utilisateurs devraient pouvoir maintenir indéfiniment un rythme constant.
+* JULIEN: or on vit dans un monde qui accélère, ou du moins qui tente d'accélérer, il y a donc besoin de scaler : livrer plus rapidement, plus fréquemment, plus fiablement, avec plus de personnes, avec moins de personnes, avec de nouvelles technos, ... Tout ça est facilité, si ce n'est permis par les tests autos. Les tests manuels sont un véritable frein à toute démarche d'accélération. On ne dit pas "mort au test manuel", il a sa place dans une stratégie, mais il n'est pas un pilier essentiel.
+* JULIEN: une suite de test rapide, fiable et maintenable, c'est un allié inestimable lors de la vie du projet, et une bonne garantie que le projet peut perdurer.
+
+-v-
+
+## Risque
+
+<img src="./vd-photography-6EEBGlCVOnw-unsplash.jpg" class="r-stretch" alt="" />
+
+Notes:
+* JULIEN: l'absence de test autos est une pente glissante : plus longtemps on attend, moins ils seront utiles, et plus ils couteront à mettre en place (car le projet ne les aura pas prévus), donc leur rentabilité s'effondre. Et on finit sur un projet qu'on oblige les devs à tester manuellement, laborieusement et à répétition. Non non, j'ai pas posé une démission pour ce motif il y a quelques mois.
+* TODO ERIC: si on n'a pas de temps mort-mou pour réparer au fur et à mesure ça se dégrade
 
 ---
 
 <!-- .slide: data-background-image="./osama-elsayed-vqRMXgVtGXM-unsplash.jpg" -->
 
-# TODO: 7. tester au bon niveau : pyramide ! (quadrants ?)
+# 7. Les niveaux de test
+
+-v-
+
+## Pyramide ?
+
+<img src="./helen-browne-0cw5y0iW490-unsplash.jpg" class="r-stretch" alt="" />
 
 Notes:
-* ERIC: ex mauvaise répartition à cause de l'architecture du projet = trop de tests end-to-end sur hardware => perte de performance (un test = 5 min d'exec au lieu de 30s)
-* JULIEN: ACP : IMP unit, composant (microservice), système, prototype
-* JULIEN: mais la plupart du temps, les pyramides sont foirées
-* transition vélocité
+* TODO ERIC: ex mauvaise répartition à cause de l'architecture du projet = trop de tests end-to-end sur hardware => perte de performance (un test = 5 min d'exec au lieu de 30s)
+* JULIEN: Un bel exemple de pyramide ratée. Pour ma part, pour reprendre l'exemple de l'appli microservices sur lequel je travaillais, l'un deux était extrêmement complexe et critique, et donc avait le droit à des tests unitaires et de performance ciblés. Mais la plupart des autres faisaient du passe-plat, et donc était sommairement testés au niveau du composant. J'ai préféré mettre l'effort au niveau de l'intégration de tous les micro-services et de leur environnement, pour valider des scénarios métier de bout-en-bout. Et on essayait de faire quelques tests sur le prototype hardware, mais principalement du cas nominal. On n'était donc pas sur une pyramide, mais plutôt sur un magnum. C'est ce qui nous semblait le mieux adresser nos besoins et risques.
+* JULIEN: il ne faut pas suivre aveuglément la règle de faire des pyramides de test (comme il ne faut suivre aucune règle aveuglément). La pyramide c'est la forme décidée par la stratégie de test, qui se base sur les particularités du projet et de l'équipe qui le développe, à un moment donné. Donc il n'y en a pas deux pareilles, ça dépend. Et une bonne pyramide donne du bon feedback, permet un développement rapide.
+
+Notes:
+* transition vélocité/feedback
 
 ---
 
@@ -279,13 +307,14 @@ Notes:
   * si les features sont de plus en plus lentes ou difficiles à produire, ça casse l'itérativité
 * NOUS2: rapide à écrire, à lancer
 * JULIEN: robot2jira: end-to-end 2 minutes
+* TODO: redite du scaling ???
 
 ---
 
-# TODO: 9. apprendre à apprendre : accelerate
+# TODO: 9. Apprendre à apprendre : DORA
 
 Notes:
-* JULIEN: Accelerate & KPI (aussi cf podcast carrefour QE)
+* JULIEN: DORA, Accelerate & KPI (aussi cf podcast carrefour QE)
 * JULIEN: DevOps et CI (robot2jira)
 * ERIC: apprendre = la base de l'agilité
     * en rétro, décider de re-prioriser les tests ou la CI
@@ -335,35 +364,47 @@ Notes:
 
 # Crédits photos
 
-* Photo of a rusty car by <a href="https://unsplash.com/@meteorphoto">Peter Pryharski</a> on <a href="https://unsplash.com/photos/wrecked-white-volkswagen-beetle-coupe-on-grass-8zJSg57TBBA">Unsplash</a>
-* Photo of a castle by <a href="https://unsplash.com/@daniel_macura">Daniel Mačura</a> on <a href="https://unsplash.com/photos/brown-concrete-castle-on-top-of-mountain-uzDKKDK-A1E">Unsplash</a>
-* Image of an abstract mechanism by <a href="https://unsplash.com/@growtika">Growtika</a> on <a href="https://unsplash.com/photos/a-group-of-blue-and-white-drones-UyvnmroVRW4">Unsplash</a>
-* Photo of a train map by <a href="https://unsplash.com/@jac_kie_co">Jackie Alexander</a> on <a href="https://unsplash.com/photos/a-subway-map-with-a-lot-of-asian-characters-on-it-f12UaTBVtC0">Unsplash</a>
-* Photo of a road by <a href="https://unsplash.com/@jerrykavan">Jerry Kavan</a> on <a href="https://unsplash.com/photos/aerial-view-of-asphalt-road-surrounded-by-trees-vv-oEGlN-4E">Unsplash</a>
-* [Photo of a logbook on Wikimedia Commons (CC-BY-SA 3.0)](https://commons.wikimedia.org/wiki/File:Garbage_log.jpeg)
-* Photo of a cracked rock by <a href="https://unsplash.com/@braxted">Chris J Walker</a> on <a href="https://unsplash.com/photos/a-rock-with-a-crack-in-the-middle-of-it-CaleudV9jII">Unsplash</a>
-* Photo of textile seam by <a href="https://unsplash.com/@enginakyurt">engin akyurt</a> on <a href="https://unsplash.com/photos/blue-denim-textile-with-white-button-M-NPViXH_do">Unsplash</a>
-* Image du film "Everything, Everywhere, All at Once" ([chez Vanity Fair](https://www.vanityfair.com/hollywood/2022/04/everything-everywhere-all-at-once-movie-review))
-* Photo of a facepalm by <a href="https://unsplash.com/@silverkblack">Vitaly Gariev</a> on <a href="https://unsplash.com/photos/man-rubbing-his-face-in-front-of-laptop-bl7h_R-PKpU">Unsplash</a>
-* Photo of 3 cats by <a href="https://unsplash.com/@theluckyneko">The Lucky Neko</a> on <a href="https://unsplash.com/photos/three-brown-tabby-kitten-lying-on-board-uePn9YCTCY0">Unsplash</a>
+<!-- first slide -->
+* Photo of a rusty car by <a href="https://unsplash.com/@meteorphoto">Peter Pryharski</a> on <a href="https://unsplash.com/photos/wrecked-white-volkswagen-beetle-coupe-on-grass-8zJSg57TBBA">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+<!-- intro -->
+* ["Official logo for the Top Ten Professional Women and Leading Business Awards event" by Marjaree Mason Center on Wikimedia Commons (CC-BY-SA 4.0)](https://commons.wikimedia.org/wiki/File:Top_Ten_Logo.jpg)
+<!-- 1. Code-archi testable -->
+* Photo of a castle by <a href="https://unsplash.com/@daniel_macura">Daniel Mačura</a> on <a href="https://unsplash.com/photos/brown-concrete-castle-on-top-of-mountain-uzDKKDK-A1E">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+* Image of an abstract mechanism by <a href="https://unsplash.com/@growtika">Growtika</a> on <a href="https://unsplash.com/photos/a-group-of-blue-and-white-drones-UyvnmroVRW4">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+* Photo of a train map by <a href="https://unsplash.com/@jac_kie_co">Jackie Alexander</a> on <a href="https://unsplash.com/photos/a-subway-map-with-a-lot-of-asian-characters-on-it-f12UaTBVtC0">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+* Photo of a road by <a href="https://unsplash.com/@jerrykavan">Jerry Kavan</a> on <a href="https://unsplash.com/photos/aerial-view-of-asphalt-road-surrounded-by-trees-vv-oEGlN-4E">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+* ["Garbage Record Book, as required by MARPOL" by Ciacho5 on Wikimedia Commons (CC-BY-SA 3.0)](https://commons.wikimedia.org/wiki/File:Garbage_log.jpeg)
+* Photo of a cracked rock by <a href="https://unsplash.com/@braxted">Chris J Walker</a> on <a href="https://unsplash.com/photos/a-rock-with-a-crack-in-the-middle-of-it-CaleudV9jII">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+* Photo of textile seam by <a href="https://unsplash.com/@enginakyurt">engin akyurt</a> on <a href="https://unsplash.com/photos/blue-denim-textile-with-white-button-M-NPViXH_do">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+<!-- 2. outils -->
+<!-- 3. fiabilité -->
+<!-- 4. test en amont -->
+* Image du film "Everything, Everywhere, All at Once" ([via Vanity Fair](https://www.vanityfair.com/hollywood/2022/04/everything-everywhere-all-at-once-movie-review))
+* Photo of a facepalm by <a href="https://unsplash.com/@silverkblack">Vitaly Gariev</a> on <a href="https://unsplash.com/photos/man-rubbing-his-face-in-front-of-laptop-bl7h_R-PKpU">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+* Photo of 3 cats by <a href="https://unsplash.com/@theluckyneko">The Lucky Neko</a> on <a href="https://unsplash.com/photos/three-brown-tabby-kitten-lying-on-board-uePn9YCTCY0">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
 * Image d'un Example Mapping, par Julien Lenormand, basé sur l'[exemple d'Arnaud Langlade](https://www.youtube.com/watch?v=0Qlx7q1-GZA)
 * Screenshot de code de Behavior-Driven Development, par [Dominik Szahidewicz](https://bugbug.io/blog/software-testing/8-steps-to-use-behavior-driven-development/)
 * [Photo of a Kanban board by Chris Huffman on Flickr (CC-BY-NC-ND 2.0)](https://www.flickr.com/photos/chrishuffman/2336990347)
-* Photo de l'incendie du datacenter d'OVH, Copyright SAPEURS-POMPIERS DU BAS-RHIN
-* Photo of monitoring by <a href="https://unsplash.com/@lukechesser">Luke Chesser</a> on <a href="https://unsplash.com/photos/graphs-of-performance-analytics-on-a-laptop-screen-JKUTrJ4vK00">Unsplash</a>
-* Photo of repairing by <a href="https://unsplash.com/@thisisengineering">ThisisEngineering</a> on <a href="https://unsplash.com/photos/person-holding-green-and-black-circuit-board-32PpagSzeGs">Unsplash</a>
-* Photo of pyramids by <a href="https://unsplash.com/@osamaabosaadia">Osama Elsayed</a> on <a href="https://unsplash.com/photos/brown-pyramid-under-blue-sky-during-daytime-vqRMXgVtGXM">Unsplash</a>
-* Photo of a rabbit by [Степана](https://unsplash.com/@sgalagaev>Ансплэш) on [Unsplash](https://unsplash.com/photos/brown-rabbit-on-window-during-daytime--5iSCtrJX5o)
+<!-- 5. test en aval -->
+* Photo de l'incendie du datacenter d'OVH (Copyright SAPEURS-POMPIERS DU BAS-RHIN)
+* Photo of monitoring by <a href="https://unsplash.com/@lukechesser">Luke Chesser</a> on <a href="https://unsplash.com/photos/graphs-of-performance-analytics-on-a-laptop-screen-JKUTrJ4vK00">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+* Photo of repairing by <a href="https://unsplash.com/@thisisengineering">ThisisEngineering</a> on <a href="https://unsplash.com/photos/person-holding-green-and-black-circuit-board-32PpagSzeGs">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+<!-- 6. investir -->
+* Photo of dollars by <a href="https://unsplash.com/@jpvalery">Jp Valery</a> on <a href="https://unsplash.com/photos/100-us-dollar-banknote-lVFoIi3SJq8">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+* Photo of spiraling staircase by <a href="https://unsplash.com/@tine999">Tine Ivanič</a> on <a href="https://unsplash.com/photos/spiral-concrete-staircase-u2d0BPZFXOY">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+* Photo of boardgame "Serpents and Ladders" by <a href="https://unsplash.com/@vdphotography">VD Photography</a> on <a href="https://unsplash.com/photos/a-close-up-of-a-board-game-with-dices-6EEBGlCVOnw">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+<!-- 7. niveaux de test -->
+* Photo of pyramids by <a href="https://unsplash.com/@osamaabosaadia">Osama Elsayed</a> on <a href="https://unsplash.com/photos/brown-pyramid-under-blue-sky-during-daytime-vqRMXgVtGXM">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+* Photo of inverted pyramid by <a href="https://unsplash.com/@sherlocke">Helen Browne</a> on <a href="https://unsplash.com/photos/modernist-building-with-a-unique-inverted-pyramid-design-0cw5y0iW490">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+<!-- 8. feedback -->
+<!-- 9. DORA -->
+<!-- 10. ROI -->
+<!-- cute bonus -->
+* Photo of a rabbit by [Степана](https://unsplash.com/@sgalagaev>Ансплэш) on [Unsplash](https://unsplash.com/photos/brown-rabbit-on-window-during-daytime--5iSCtrJX5o) (<a href="https://unsplash.com/license">Free licence</a>)
 
 -v-
 
-* TODO
-
----
-
-# Remerciements
-
-* TODO garder ?
+* TODO split on several pages
 
 ---
 
