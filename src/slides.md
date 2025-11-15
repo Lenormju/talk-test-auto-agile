@@ -73,7 +73,6 @@ Notes:
   * schneider : archi de robot2jira pour intégrer un rapport du pipeline, testable design
   * schneider : procès
   * sncf : test de canva image très très difficile (données non maitrisées), avoir une API pour récupérer ses infos, qui est testée au niveau composant
-    * TODO Julien : trouver un meilleur exemple de penser la testabilité dès les specs
     * quid de l'example mapping ?
   * schneider proac : heureusement y'a des tests e2e, mais il manque de tests unitaires/integ, donc l'itération est très lente, cf pyramide pas respectée, et boucle de feedback niveau produit cassée par la nightly, et boucle système cassée par release
   * initiative avec Eloise : avoir les moyens en temps, 2 ans plus tard ça s'est perdu
@@ -100,7 +99,7 @@ Notes:
 
 ## Permettre la testabilité
 
-<img src="./growtika-UyvnmroVRW4-unsplash.jpg" class="r-stretch" />
+<img src="./growtika-UyvnmroVRW4-unsplash.jpg" class="r-stretch" alt="" />
 
 Notes:
 * JULIEN: Eric et moi nous sommes rencontré sur une mission il y a 3 ans, un projet de micro-services, moi côté dev, lui côté IVVQ (Valid/Verif/QA). On était sur du bon vieux silo : dans mon équipe on essayait de développer des trucs, on lui livrait le bousin, et eux devaient se débrouiller pour réussir à les configurer, lancer, instrumenter, et finalement tester. Si l'on ne prenait en compte que nos spécifications (fonctionnelles), on devait lui livrer quelque chose de sécurisé, sur lequel on ne peut pas se brancher, donc pas vraiment moyen de tester.
@@ -113,7 +112,7 @@ Notes:
 
 ## Ou bien ne pas pouvoir tester
 
-<img src="./jackie-alexander-f12UaTBVtC0-unsplash.jpg" class="r-stretch" />
+<img src="./jackie-alexander-f12UaTBVtC0-unsplash.jpg" class="r-stretch" alt="" />
 
 Notes:
 * JULIEN : là c'était un exemple de quand ça se passe bien, parce qu'on a pu discuter, prendre en compte les besoins. Quand ça ne l'est pas, on se retrouve parfois au pied du mur. J'ai été sur une mission d'automatisation de test, bien après que l'application ait été developpée. Il y avait des cas de test prévus pour des humains, et qui consistaient à cliquer sur des zones interactives d'une image (un canva). Autant c'était simple humainement de le faire, autant écrire un script équivalent s'est montré bien trop compliqué. Il aurait fallu ajouter des ids de test, des métadonnées, ou un bypass, ... peu importe, mais une façon qui permettait de ne pas avoir à développer un modèle de vision customisé.
@@ -122,7 +121,7 @@ Notes:
 
 ## La testabilité est une feature
 
-<img src="./Garbage_log.jpeg" class="r-stretch" />
+<img src="./Garbage_log.jpeg" class="r-stretch" alt="" />
 
 Notes:
 * JULIEN: sur une autre mission, j'avais initié une refonte d'une petite application, dont le but principal était de lire et écrire sur une API tierce (qu'on ne controle pas, et qui est lent et peu fiable). Beaucoup de side-effects. Pour faciliter la testabilité, j'aurais pu découpler mon pipeline des interactions avec le serveur. Mais j'aurais été obligé de développer un fake, ce qui aurait posé d'autres problèmes. J'ai donc adapté ma conception : l'intention et le résultat de chaque interaction avec le serveur était consigné dans un journal, qui permettait lors des tests d'identifier efficacement ce qui s'était passé, et ce qui n'était pas normal. Et ça aidait énormément pour dépanner les erreurs en prod ensuite. J'ai pris en compte la testabilité dans le design, ce qui a ouvert la voie à des features différentes.
@@ -131,8 +130,8 @@ Notes:
 
 ## Quelques notions
 
-<img src="./chris-j-walker-CaleudV9jII-unsplash.jpg" />
-<img src="./engin-akyurt-M-NPViXH_do-unsplash.jpg" />
+<img src="./chris-j-walker-CaleudV9jII-unsplash.jpg" alt="" />
+<img src="./engin-akyurt-M-NPViXH_do-unsplash.jpg" alt="" />
 
 Notes:
 * JULIEN: si vous voulez creuser un peu, je vous invite à regarder la notion de TestOps (l'équivalent du DevOps pour le testing), ou la notion de "seams" de Michael Feathers dans Testing Legacy Software (identifier/créer des coutures/lignes de faille dans nos architectures).
@@ -172,7 +171,7 @@ Notes:
 
 ## Le test est un besoin
 
-<img src="./vitaly-gariev-bl7h_R-PKpU-unsplash.jpg" class="r-stretch" />
+<img src="./vitaly-gariev-bl7h_R-PKpU-unsplash.jpg" class="r-stretch" alt="" />
 
 Notes:
 * JULIEN: C'est quand à la toute fin qu'on veut écrire des tests, qu'on se rend compte que ce n'est pas si simple en fait ... Ah, si seulement on y avait pensé plus tôt ! Justement : le test est un besoin au niveau projet. Certes, pas un besoin utilisateur, mais un pré-requis pour pouvoir amener des solutions aux besoins clients.
@@ -182,7 +181,7 @@ Notes:
 
 ## Tres amigos
 
-<img src="./the-lucky-neko-uePn9YCTCY0-unsplash.jpg" class="r-stretch" />
+<img src="./the-lucky-neko-uePn9YCTCY0-unsplash.jpg" class="r-stretch" alt="" />
 
 Notes:
 * Julien: est-ce que vous connaissez les "tres amigos" ? PO, Dev et QA. Autrement dit : besoin client, solution technique, regard qualité et critique sur l'adéquation entre les deux. Car les QA/testeurs/... sont idalement placés à cheval entre les deux mondes, et avec un regard critique sur chacun, pour apporter une vision éclairée sur les discussions.
@@ -192,7 +191,7 @@ Notes:
 
 ## Example Mapping
 
-<img src="./example_mapping_example.excalidraw.png" class="r-stretch" />
+<img src="./example_mapping_example.excalidraw.png" class="r-stretch" alt="" />  <!-- .element: class="fragment" -->
 
 Notes:
 * TODO ERIC: quoi dire dans cette section ? recommander le replay d'Alpes Craft https://www.youtube.com/watch?v=0Qlx7q1-GZA ?
@@ -201,8 +200,9 @@ Notes:
 
 ## Behavior-Driven Development
 
+<img src="./16065255_cea1_4040_81d7_bd790e9ee650_dcd8f04b6c.png" class="r-stretch" alt="" />  <!-- .element: class="fragment" -->
+
 Notes:
-* TODO Julien: image d'exemple de test en BDD
 * JULIEN: on peut aussi recourir au BDD. Pas grand chose à voir avec les BDD (bases de données), le TDD ni le DDD, le Behavior-Driven Development consiste à rédiger des cas de test en langage humain et métier (si on considère que les humains parlent le Gherkin), lesquels pourront être exécutés automatiquement par un outil (Cucumber, Gherkin et autres variations sur le thème des concombres et des cornichons).
 * JULIEN: Côté avantages, cela permet aux PO/BA de rédiger et comprendre les cas de test, d'avoir une compréhension fine des impacts de "tests qui ne passent pas". Et ce genre de tests est souvent très utile pour comprendre ce que fait l'application. Et robuste aux refactoring (côté rédaction).
 * JULIEN: mais il y a des désavantages. Si ce ne sont pas les PO/BA/QA qui rédigent les cas de test, mais les devs, ça peut être très fastidieux comparé à utiliser les frameworks habituels des devs. Et il y a étape de conversion entre le cas de test et son implémentation en code qui peut être messy, au détriment des devs. Une solution intermédiaire c'est de répliquer la verbosité dans le framework des devs, mais ça demande de la rigueur.
@@ -213,20 +213,36 @@ Notes:
 
 ## Le danger de la Loi de Conway
 
-<img src="./2336990347_6b3604ee1c_c.jpg" class="r-stretch" />
+<img src="./2336990347_6b3604ee1c_c.jpg" class="r-stretch" alt="" />
 
 Notes:
-* TODO JULIEN: image de board Kanban ou la faire moi-même
 * JULIEN: je n'ai pas relu toutes les versions du Guide Scrum, mais il n'y est pas fait mention de Kanban. Et surtout, quelles colonnes mettre dans son Kanban ? Moi j'aime bien TODO/DOING/DONE. Car ça met l'emphase sur ce qui est EN COURS et ce qui est TERMINÉ. Et très simple de mettre une WIP-Limit. Mais souvent on va mettre plein de colonnes, pour décrire toutes les étapes de la production. Effectivement, ça permet de meixu voir le degré d'avancement des tickets. Mais qu'il y ait besoin de granularité dans l'avancement ça suppose que ces tickets sont longs à réaliser (premier red flag pour moi). Et qu'il y ait besoin d'avoir des étapes différentes, c'est souvent le signe que différentes personnes sont requises pour la traversée. Et que la responsabilité est divisée (donc personne n'est responsabla, aka chat perché). Et donc on découpe en fonction des personnes, on crée des silos. Pour moi, c'est un anti-pattern, qu'il faut combattre.
 * JULIEN: la Loi de Conway, c'est que "les organisations qui designent des systèmes sont forcées de produire des designs qui sont des copies des structures de communication de ces organisations". Autrement dit, si j'ai une équipe Frontend, une équipe Backend, et une équipe Base de Données, qu'importe le besoin, la solution aura la forme Frontend/Backend/Base de données. Ce qui est un énorme biais. Il faut donc penser les structures d'une organisation pour influer positivement sur les systèmes. D'où les "feature teams" : une équipe pluri-disciplinaire, indivisible, en charge de la réalisation bout-en-bout des solutions aux besoins métiers. On dirait la définition du Scrum Guide ! On ne devrait pas chercher à créer des verticales dans un kanban, mais des horizontales. 
 
 ---
 
-# TODO: 5. intégrer en aval : maitriser les défauts envoyés en production
+<!-- .slide: data-background-image="./OVH-en-flammes.jpg" -->
+
+# Maitriser les défauts envoyés en production
+
+-v-
+
+## Accepter de faire des erreurs
+
+<img src="./luke-chesser-JKUTrJ4vK00-unsplash.jpg" class="r-stretch" alt="" />
 
 Notes:
-* ERIC: rapport de maintenance: utile pour les devs, pour les testeurs, pour le support, pour le client + slide 
-* JULIEN: Thales : logging, monitoring et observability
+* JULIEN: on ne peut pas garantir le zéro défaut (à coût raisonnable pour la grande majorité des projets), donc il faut accepter qu'il y aura des erreurs en prod. Ce n'est pas du fatalisme mais du pragmatisme. Et donc au lieu de fataliser "tant pis !", on peut pragmatiquement surveiller l'état de la production, pour être notifié des erreurs DÉTECTABLES. Couplé éventuellement à de l'alerting, ça permet de repérer les erreurs, voire de les corriger avant même que les utilisateurs aient le temps de s'en plaindre. Quand l'utilisateur reçoit un mail pour l'informer que le problème qu'il est en train de rencontrer vient d'être résolu, ça fait un super effet !
+* JULIEN: et y'a aussi le facteur psychologique pour l'équipe : ça donne un peu de concret, de visuel, et de proximité à une "production" qui peut être un peu trop abstraite. Ca donne envie d'en prendre soin (ownership, DevOps), et d'être rassuré qu'elle semble bien fonctionner.
+
+-v-
+
+## Optimiser la collecte d'informations
+
+<img src="./thisisengineering-32PpagSzeGs-unsplash.jpg" class="r-stretch" alt="" />
+
+Notes:
+* ERIC: rapport de maintenance: utile pour les devs, pour les testeurs, pour le support, pour le client + slide
 
 ---
 
@@ -241,6 +257,8 @@ Notes:
 * dès le départ (moins cher à mettre en place, et rentables plus longtemps)
 
 ---
+
+<!-- .slide: data-background-image="./osama-elsayed-vqRMXgVtGXM-unsplash.jpg" -->
 
 # TODO: 7. tester au bon niveau : pyramide ! (quadrants ?)
 
@@ -311,6 +329,7 @@ Notes:
 * TODO Ifttd 327 + exe
 * podcast QE
 * podcast Opiniated de Dev Expe
+* [Talk par Arnaud Langlade sur l'Example Mapping](https://www.youtube.com/watch?v=0Qlx7q1-GZA)
 
 ---
 
@@ -328,7 +347,12 @@ Notes:
 * Photo of a facepalm by <a href="https://unsplash.com/@silverkblack">Vitaly Gariev</a> on <a href="https://unsplash.com/photos/man-rubbing-his-face-in-front-of-laptop-bl7h_R-PKpU">Unsplash</a>
 * Photo of 3 cats by <a href="https://unsplash.com/@theluckyneko">The Lucky Neko</a> on <a href="https://unsplash.com/photos/three-brown-tabby-kitten-lying-on-board-uePn9YCTCY0">Unsplash</a>
 * Image d'un Example Mapping, par Julien Lenormand, basé sur l'[exemple d'Arnaud Langlade](https://www.youtube.com/watch?v=0Qlx7q1-GZA)
+* Screenshot de code de Behavior-Driven Development, par [Dominik Szahidewicz](https://bugbug.io/blog/software-testing/8-steps-to-use-behavior-driven-development/)
 * [Photo of a Kanban board by Chris Huffman on Flickr (CC-BY-NC-ND 2.0)](https://www.flickr.com/photos/chrishuffman/2336990347)
+* Photo de l'incendie du datacenter d'OVH, Copyright SAPEURS-POMPIERS DU BAS-RHIN
+* Photo of monitoring by <a href="https://unsplash.com/@lukechesser">Luke Chesser</a> on <a href="https://unsplash.com/photos/graphs-of-performance-analytics-on-a-laptop-screen-JKUTrJ4vK00">Unsplash</a>
+* Photo of repairing by <a href="https://unsplash.com/@thisisengineering">ThisisEngineering</a> on <a href="https://unsplash.com/photos/person-holding-green-and-black-circuit-board-32PpagSzeGs">Unsplash</a>
+* Photo of pyramids by <a href="https://unsplash.com/@osamaabosaadia">Osama Elsayed</a> on <a href="https://unsplash.com/photos/brown-pyramid-under-blue-sky-during-daytime-vqRMXgVtGXM">Unsplash</a>
 * Photo of a rabbit by [Степана](https://unsplash.com/@sgalagaev>Ансплэш) on [Unsplash](https://unsplash.com/photos/brown-rabbit-on-window-during-daytime--5iSCtrJX5o)
 
 -v-
