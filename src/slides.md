@@ -211,6 +211,7 @@ Notes:
 * JULIEN: mais il y a des désavantages. Si ce ne sont pas les PO/BA/QA qui rédigent les cas de test, mais les devs, ça peut être très fastidieux comparé à utiliser les frameworks habituels des devs. Et il y a étape de conversion entre le cas de test et son implémentation en code qui peut être messy, au détriment des devs. Une solution intermédiaire c'est de répliquer la verbosité dans le framework des devs, mais ça demande de la rigueur.
 * JULIEN: j'ai connu des équipes qui adorent, d'autres qui détestent, donc à voir selon le contexte (comme d'habitude, il n'y a pas de "best practices").
 * TODO Julien: demander slides de la conf du DevFest Toulouse sur les events
+  * https://github.com/ThibautCantet/billetterie/blob/conference/refactoring-with-implementation/src/test/resources/com/billetterie/with-3DS.feature
 
 -v-
 
@@ -449,11 +450,36 @@ Notes:
 
 # Questions
 
-Slides : [https://github.com/Lenormju/talk-test-auto-agile/](https://github.com/Lenormju/talk-test-auto-agile/)
+<style>
+ .column {
+  float: left;
+  width: 50%;
+}
+</style>
+
+
+<div class="row">
+<div class="column">
+
+Slides
+
+[https://github.com/Lenormju/talk-test-auto-agile/](https://github.com/Lenormju/talk-test-auto-agile/)
+
+<img src="qr-code-github.png" alt="" height="700px" />
+
+</div>
+<div class="column">
+
+OpenFeedback
+
+[https://app.roti.express/r/ag2025-13](https://app.roti.express/r/ag2025-13)
+
+<img src="qr-code-agile-grenoble.png" alt="" height="700px" />
+
+</div>
+</div>
 
 Notes:
-* TODO QRcode vers les slides : https://github.com/Lenormju/talk-test-auto-agile/
-* TODO ROTI d'Agile Grenoble
 
 ---
 
