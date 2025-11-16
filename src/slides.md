@@ -14,13 +14,14 @@
 
 Notes:
 * TODO ERIC: idée de meilleure illustration pour la slide de titre ?
+* TODO JULIEN: script de build pour impression PDF
 
 ---
 
 <!-- .slide: data-background-image="./Agile Grenoble - slide sponsor 2025-11-15.png" -->
 
 Notes:
-* TODO sponsors Agile Genève
+* TODO JULIEN: sponsors Agile Genève
 
 -v-
 
@@ -105,11 +106,9 @@ Notes:
 <img src="./growtika-UyvnmroVRW4-unsplash.jpg" class="r-stretch" alt="" />
 
 Notes:
-* JULIEN: Eric et moi nous sommes rencontré sur une mission il y a 3 ans, un projet de micro-services, moi côté dev, lui côté IVVQ (Valid/Verif/QA). On était sur du bon vieux silo : dans mon équipe on essayait de développer des trucs, on lui livrait le bousin, et eux devaient se débrouiller pour réussir à les configurer, lancer, instrumenter, et finalement tester. Si l'on ne prenait en compte que nos spécifications (fonctionnelles), on devait lui livrer quelque chose de sécurisé, sur lequel on ne peut pas se brancher, donc pas vraiment moyen de tester.
-  * TODO ERIC: Julien a plus en tête les détails du spy, c'était une histoire de MITM ?
+* ERIC: Julien et moi nous sommes rencontré sur une mission il y a 3 ans, un projet de micro-services, moi côté dev, lui côté IVVQ (Valid/Verif/QA). On était sur du bon vieux silo : dans mon équipe on essayait de développer des trucs, on lui livrait le bousin, et eux devaient se débrouiller pour réussir à les configurer, lancer, instrumenter, et finalement tester. Si l'on ne prenait en compte que nos spécifications (fonctionnelles), on devait lui livrer quelque chose de sécurisé, sur lequel on ne peut pas se brancher, donc pas vraiment moyen de tester. Besoin de récupérer les logs, de permettre d'intercepter les connexions, ...
 * JULIEN: Mais je voyais bien que ce qu'on allait leur livrer serait difficile voire impossible à tester (on avait déjà du mal nous). Je suis donc allé voir Eric, que je ne connaissais pas encore, et on a parlé. Que pouvais-je prendre en compte dans ma conception et mon implémentation pour lui faciliter la vie ?
 * JULIEN: Là j'ai du aller parler à un autre être humain pour faire de meilleurs choix, mais souvent c'est avec notre nous du futur qu'il faut discuter des besoins de test, et prévoir dès aujourd'hui le code pour.
-  * TODO JULIEN: intégrer Eric à ce discours
 
 -v-
 
@@ -138,6 +137,7 @@ Notes:
 
 Notes:
 * JULIEN: si vous voulez creuser un peu, je vous invite à regarder la notion de TestOps (l'équivalent du DevOps pour le testing), ou la notion de "seams" de Michael Feathers dans Testing Legacy Software (identifier/créer des coutures/lignes de faille dans nos architectures).
+* TODO Julien: virer le TestOps ici
 
 ---
 
@@ -247,6 +247,7 @@ Notes:
 
 Notes:
 * ERIC: rapport de maintenance: utile pour les devs, pour les testeurs, pour le support, pour le client + slide
+* la débuggabilité est une feature
 
 ---
 
@@ -256,7 +257,7 @@ Notes:
 
 Notes:
 * JULIEN: comme beaucoup de choses, c'est une question d'argent. Effectivement, implémenter et maintenir des tests autos ça coûte de l'argent. Mais ne pas les implémenter ou les maintenir, c'est faire le choix soit de payer du test manuel fréquent et large, soit de prendre le risque de ne pas tester. Eric, tu aurais une anecdote sur le fait de ne pas tester ?
-* TODO ERIC: anecdote procès
+* TODO JULIEN: anecdote procès
 
 -v-
 
@@ -279,6 +280,7 @@ Notes:
 Notes:
 * JULIEN: l'absence de test autos est une pente glissante : plus longtemps on attend, moins ils seront utiles, et plus ils couteront à mettre en place (car le projet ne les aura pas prévus), donc leur rentabilité s'effondre. Et on finit sur un projet qu'on oblige les devs à tester manuellement, laborieusement et à répétition. Non non, j'ai pas posé une démission pour ce motif il y a quelques mois.
 * TODO ERIC: si on n'a pas de temps mort-mou pour réparer au fur et à mesure ça se dégrade
+* TODO ERIC: en review, rappeller qu'il faut investir du temps humain dans les tests
 
 ---
 
@@ -296,22 +298,19 @@ Notes:
 * TODO ERIC: ex mauvaise répartition à cause de l'architecture du projet = trop de tests end-to-end sur hardware => perte de performance (un test = 5 min d'exec au lieu de 30s)
 * JULIEN: Un bel exemple de pyramide ratée. Pour ma part, pour reprendre l'exemple de l'appli microservices sur lequel je travaillais, l'un deux était extrêmement complexe et critique, et donc avait le droit à des tests unitaires et de performance ciblés. Mais la plupart des autres faisaient du passe-plat, et donc était sommairement testés au niveau du composant. J'ai préféré mettre l'effort au niveau de l'intégration de tous les micro-services et de leur environnement, pour valider des scénarios métier de bout-en-bout. Et on essayait de faire quelques tests sur le prototype hardware, mais principalement du cas nominal. On n'était donc pas sur une pyramide, mais plutôt sur un magnum. C'est ce qui nous semblait le mieux adresser nos besoins et risques.
 * JULIEN: il ne faut pas suivre aveuglément la règle de faire des pyramides de test (comme il ne faut suivre aucune règle aveuglément). La pyramide c'est la forme décidée par la stratégie de test, qui se base sur les particularités du projet et de l'équipe qui le développe, à un moment donné. Donc il n'y en a pas deux pareilles, ça dépend. Et une bonne pyramide donne du bon feedback, permet un développement rapide.
-
-Notes:
 * transition vélocité/feedback
 
 ---
 
-# TODO: 8. écouter ses tests : feedback, rapidité, itérativité, confiance d'aller vite
+# TODO: 8. Confiance d'aller vite
 
 Notes:
 * ERIC: 
   * faire slide
   * développement de l'iso est plus rapide grace au nightly + confiance d'avancer (même si on connait pas tout le produit, on a un garde fou eg: timeout iec)
   * si les features sont de plus en plus lentes ou difficiles à produire, ça casse l'itérativité
-* NOUS2: rapide à écrire, à lancer
+* JULIEN: rapide à écrire, à lancer
 * JULIEN: robot2jira: end-to-end 2 minutes
-* TODO: redite du scaling ???
 
 ---
 
@@ -331,7 +330,7 @@ Notes:
 
 -v-
 
-## DORA
+## DORA : Apprendre à apprendre
 
 <img src="./Dora_the_Explorer_(4844562834).jpg" class="r-stretch" alt="" />
 
@@ -347,23 +346,34 @@ Notes:
 
 # 10. Estimer le ROI
 
+Notes:
+* TODO ERIC: investissement constant requis, impression de ne pas dev
+* TODO ERIC : transition "des fois on a l'impression que ça ne sert à rien, des fois c'est vraiment le cas"
+
 -v-
 
 ## Difficile de tester
 
 Notes:
-* TODO JULIEN: UI/UX ergonomie
 * TODO ERIC: tests de cybersécurité, encore principalement manuels (audits, pentesters, analyse des remontées), l'outillage auto commence à apparaître, et l'IA émerge
+* TODO JULIEN: UI/UX ergonomie
 
 -v-
 
-## Tant pis (pour le moment)
+## Tant pis
 
 Notes:
-* JULIEN: du code legacy difficile à tester en auto, beaucoup de retard, besoin urgent de mettre en prod : pas le choix, on va tester manuellement un peu, et croiser les doigts (et serrer les fesses)
 * TODO ERIC: 
   * projet web dev, 6 mois en école : trop compliqué, donc manuel (coût d'apprentissage, de mise en place, code jetable ou POC)
   * puis automatisation après lorsqu'on se rend compte qu'on veut le maintenir sur la durée
+* TODO JULIEN: du code legacy difficile à tester en auto, beaucoup de retard, besoin urgent de mettre en prod : pas le choix, on va tester manuellement un peu, et croiser les doigts (et serrer les fesses)
+
+-v-
+
+## Ou choisir de rester manuel
+
+Notes:
+* TODO ERIC: monkey testing, test manuel exploratoire
 
 ---
 
@@ -380,17 +390,19 @@ Notes:
 * reprendre le manifeste agile, et remplacer le mot "dev" par "test"
     * Individuals and interactions over processes and tools
     * Working TEST over comprehensive JIRA
-    * Dev-Test collaboration over {je passe le ticket au prochain, bon courage}
+    * Dev-Test collaboration over "c'est pas mon problème"
     * Responding to change over following a TEST plan
 * le test comme moteur de la boucle de feedback : les tests agiles sont les tests autos, au lieu de les faire après on les fait en même temps, on itère
+* TODO JULIEN: faire l'animation
+* NOUS2: énoncer en alterné
 
 ---
 
 # Pour aller + loin
 
-* TODO
+* TODO JULIEN: reprendre des choses de l'Enfer des tests ?
 * [DORA Core Model](https://dora.dev/research/?view=detail)
-* [[Talk]: Arnaud Langlade - Example Mapping](https://www.youtube.com/watch?v=0Qlx7q1-GZA)
+* [[Talk] Arnaud Langlade - Example Mapping](https://www.youtube.com/watch?v=0Qlx7q1-GZA)
 * [[Podcast] If This Then Dev #327 - Fiabiliser l'usine logicielle, avec Geoffrey Berard](https://www.ifttd.io/episodes/fiabiliser-l-usine-logicielle) + sa version compilée "#327.exe" avec Louis Pinsard
 * [[Podcast] Developer Experience Opionated #3 - Comment penser les tests logiciels en 2025, avec Antoine Craske](https://podcast.ausha.co/developer-experience/antoine-craske)
 * [[Podcast] QG Qualité - Le QE Score chez Carrefour, avec Simon Champenois](https://www.ssid.fr/qe-score/)
@@ -444,7 +456,7 @@ Notes:
 
 -v-
 
-* TODO split on several pages
+* TODO JULIEN: split on several pages
 
 ---
 
@@ -480,6 +492,13 @@ OpenFeedback
 </div>
 
 Notes:
+
+---
+
+# Rappels des 10 points
+
+Notes:
+* TODO JULIEN
 
 ---
 
