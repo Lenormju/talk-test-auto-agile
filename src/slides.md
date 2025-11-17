@@ -14,14 +14,14 @@
 
 Notes:
 * TODO ERIC: idée de meilleure illustration pour la slide de titre ?
-* TODO JULIEN: script de build pour impression PDF
 
 ---
 
 <!-- .slide: data-background-image="./Agile Grenoble - slide sponsor 2025-11-15.png" -->
 
+[//]: # (<!-- .slide: data-background-image="./Agile Genève - slide sponsor QA.png" -->)
+
 Notes:
-* TODO JULIEN: sponsors Agile Genève
 
 -v-
 
@@ -130,14 +130,14 @@ Notes:
 
 -v-
 
-## Quelques notions
+## Architecturer la testabilité
 
 <img src="./chris-j-walker-CaleudV9jII-unsplash.jpg" alt="" />
 <img src="./engin-akyurt-M-NPViXH_do-unsplash.jpg" alt="" />
 
 Notes:
-* JULIEN: si vous voulez creuser un peu, je vous invite à regarder la notion de TestOps (l'équivalent du DevOps pour le testing), ou la notion de "seams" de Michael Feathers dans Testing Legacy Software (identifier/créer des coutures/lignes de faille dans nos architectures).
-* TODO Julien: virer le TestOps ici
+* JULIEN: une "bonne" archi, pas seulement en termes de testabilité, c'est la bonne adéquation de la solution actuelle aux besoins actuels et futurs. Pour les besoins actuels c'est déjà pas simple, pour les besoins futurs encore moins !
+* JULIEN: Mais pour ce qui concerne la testabilité en particulier, je vous recommande en particulier la notion de "seams" de Michael Feathers dans Testing Legacy Software (identifier/créer des coutures/lignes de faille dans nos architectures). On la retrouve sous une autre forme dans Team Topologies.
 
 ---
 
@@ -178,7 +178,7 @@ Notes:
 
 Notes:
 * JULIEN: C'est quand à la toute fin qu'on veut écrire des tests, qu'on se rend compte que ce n'est pas si simple en fait ... Ah, si seulement on y avait pensé plus tôt ! Justement : le test est un besoin au niveau projet. Certes, pas un besoin utilisateur, mais un pré-requis pour pouvoir amener des solutions aux besoins clients.
-* TODO JULIEN: remettre une couche de TestOps ici ? (évoqué comme "à creuser" dans la partie 1)
+* JULIEN: le Test devrait être une préoccupation tout du long de la chaîne de production de valeur. De manière similaire au DevOps qui cherche à unifier les préoccupations contradictoires Dev à celles Ops, le TestOps cherche à intégrer le Test tout du long de la chaîne de production de valeur.
 
 -v-
 
@@ -210,8 +210,7 @@ Notes:
 * JULIEN: Côté avantages, cela permet aux PO/BA de rédiger et comprendre les cas de test, d'avoir une compréhension fine des impacts de "tests qui ne passent pas". Et ce genre de tests est souvent très utile pour comprendre ce que fait l'application. Et robuste aux refactoring (côté rédaction).
 * JULIEN: mais il y a des désavantages. Si ce ne sont pas les PO/BA/QA qui rédigent les cas de test, mais les devs, ça peut être très fastidieux comparé à utiliser les frameworks habituels des devs. Et il y a étape de conversion entre le cas de test et son implémentation en code qui peut être messy, au détriment des devs. Une solution intermédiaire c'est de répliquer la verbosité dans le framework des devs, mais ça demande de la rigueur.
 * JULIEN: j'ai connu des équipes qui adorent, d'autres qui détestent, donc à voir selon le contexte (comme d'habitude, il n'y a pas de "best practices").
-* TODO Julien: demander slides de la conf du DevFest Toulouse sur les events
-  * https://github.com/ThibautCantet/billetterie/blob/conference/refactoring-with-implementation/src/test/resources/com/billetterie/with-3DS.feature
+* TODO Julien: https://github.com/ThibautCantet/billetterie/blob/conference/refactoring-with-implementation/src/test/resources/com/billetterie/with-3DS.feature ?
 
 -v-
 
@@ -256,8 +255,8 @@ Notes:
 # 6. Investir dans les tests autos
 
 Notes:
-* JULIEN: comme beaucoup de choses, c'est une question d'argent. Effectivement, implémenter et maintenir des tests autos ça coûte de l'argent. Mais ne pas les implémenter ou les maintenir, c'est faire le choix soit de payer du test manuel fréquent et large, soit de prendre le risque de ne pas tester. Eric, tu aurais une anecdote sur le fait de ne pas tester ?
-* TODO JULIEN: anecdote procès
+* JULIEN: comme beaucoup de choses, c'est une question d'argent. Effectivement, implémenter et maintenir des tests autos ça coûte de l'argent. Mais ne pas les implémenter ou les maintenir, c'est faire le choix soit de payer du test manuel fréquent et large, soit de prendre le risque de ne pas tester.
+* JULIEN: D'ailleurs, j'ai uen anecdote sur le lien entre le test et le pognon. Sur l'une de mes missions, mon client vendait son produit sur la base de features qui n'avaient pas été testées à l'échelle. Un gros client, le premier à faire des déploiements à l'échelle, a constaté des dysfonctionnements, et a envoyé des menaces de procès. En le client réalise alors le risque que cela n'avait pas été testé, d'une part par manque d'investissement, mais surtout par manque de matériel pour faire des déploiements à l'échelle. En deux semaines, il pleuvait du matériel, et réaliser ces tests était devenu une urgence. Comme quoi, le risque de perdre des millions justifiait enfin de dépenser quelques centaines de milliers d'euros.
 
 -v-
 
@@ -354,13 +353,17 @@ Notes:
 
 ## Difficile de tester
 
+<img src="./michal-parzuchowski-geNNFqfvw48-unsplash.jpg" class="r-stretch" alt="" />
+
 Notes:
 * TODO ERIC: tests de cybersécurité, encore principalement manuels (audits, pentesters, analyse des remontées), l'outillage auto commence à apparaître, et l'IA émerge
-* TODO JULIEN: UI/UX ergonomie
+* JULIEN: Encore aujourd'hui il n'est pas fréquent ni toujours simple de tester l'ergonomie. Grâce au RGAA, des outils plutôt faciles à utiliser et efficace sont disponibles pour tester l'accessibilité web. Mais en-dehors du Web, ou pour l'UX en géénral, ça reste aujourd'hui compliqué de tester (il faut une personne UX, des utilisateurs, et beaucoup de temps).
 
 -v-
 
 ## Tant pis
+
+<img src="./steve-donoghue-ynRImHi8LnY-unsplash.jpg" class="r-stretch" alt="" />
 
 Notes:
 * TODO ERIC: 
@@ -372,6 +375,8 @@ Notes:
 
 ## Ou choisir de rester manuel
 
+<img src="./elia-salibi-X_dVxQf6Y2Q-unsplash.jpg" class="r-stretch" alt="" />
+
 Notes:
 * TODO ERIC: monkey testing, test manuel exploratoire
 
@@ -381,7 +386,37 @@ Notes:
 
 # Conclusion
 
-* TODO
+<style>
+  .stacked {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    /*width: 80%;*/
+    /*height: auto;*/
+    z-index: 1;
+  }
+  .stacked.fragment {
+    z-index: 10; /* Chaque fragment aura un index plus élevé que le précédent */
+    animation: fadeIn 1s forwards; /* Animation de fade-in pour l'apparition des images */
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+
+![](./AgileManifestoForTesting-v0.png)  <!-- .element: class="fragment stacked r-stretch" -->
+![](./AgileManifestoForTesting-v1.png)  <!-- .element: class="fragment stacked r-stretch" -->
+![](./AgileManifestoForTesting-v2.png)  <!-- .element: class="fragment stacked r-stretch" -->
+![](./AgileManifestoForTesting-v3.png)  <!-- .element: class="fragment stacked r-stretch" -->
+![](./AgileManifestoForTesting-v4.png)  <!-- .element: class="fragment stacked r-stretch" -->
+![](./AgileManifestoForTesting-v5.png)  <!-- .element: class="fragment stacked r-stretch" -->
+![](./AgileManifestoForTesting-v6.png)  <!-- .element: class="fragment stacked r-stretch" -->
 
 Notes:
 * le test, grand oublié tout court
@@ -393,15 +428,18 @@ Notes:
     * Dev-Test collaboration over "c'est pas mon problème"
     * Responding to change over following a TEST plan
 * le test comme moteur de la boucle de feedback : les tests agiles sont les tests autos, au lieu de les faire après on les fait en même temps, on itère
-* TODO JULIEN: faire l'animation
+* TODO JULIEN: refaire une version plus belle, et cette fois-ci ne pas écraser le "agile" du titre
 * NOUS2: énoncer en alterné
 
 ---
 
+<!-- .slide: data-background-image="./annie-spratt-0ZPSX_mQ3xI-unsplash.jpg" -->
+
 # Pour aller + loin
 
-* TODO JULIEN: reprendre des choses de l'Enfer des tests ?
-* [DORA Core Model](https://dora.dev/research/?view=detail)
+* [DORA Core Model - Get better at getting better](https://dora.dev/research/?view=detail)
+* [[Livre] Team Topologies - Organizing for fast flow of value](https://teamtopologies.com/)
+* [Livre] Michael feathers - Working effectively with legacy code
 * [[Talk] Arnaud Langlade - Example Mapping](https://www.youtube.com/watch?v=0Qlx7q1-GZA)
 * [[Podcast] If This Then Dev #327 - Fiabiliser l'usine logicielle, avec Geoffrey Berard](https://www.ifttd.io/episodes/fiabiliser-l-usine-logicielle) + sa version compilée "#327.exe" avec Louis Pinsard
 * [[Podcast] Developer Experience Opionated #3 - Comment penser les tests logiciels en 2025, avec Antoine Craske](https://podcast.ausha.co/developer-experience/antoine-craske)
@@ -409,7 +447,23 @@ Notes:
 
 ---
 
+<!-- .slide: data-background-image="./annie-spratt-0ZPSX_mQ3xI-unsplash.jpg" -->
+
 # Crédits photos
+
+[//]: # (<img src="./Agile Manifesto for Testing - v0.png" class="r-stretch" alt="" />  <!-- .element: class="fragment stacked" -->)
+
+[//]: # (<img src="./Agile Manifesto for Testing - v1.png" class="r-stretch" alt="" />  <!-- .element: class="fragment stacked" -->)
+
+[//]: # (<img src="./Agile Manifesto for Testing - v2.png" class="r-stretch" alt="" />  <!-- .element: class="fragment stacked" -->)
+
+[//]: # (<img src="./Agile Manifesto for Testing - v3.png" class="r-stretch" alt="" />  <!-- .element: class="fragment stacked" -->)
+
+[//]: # (<img src="./Agile Manifesto for Testing - v4.png" class="r-stretch" alt="" />  <!-- .element: class="fragment stacked" -->)
+
+[//]: # (<img src="./Agile Manifesto for Testing - v5.png" class="r-stretch" alt="" />  <!-- .element: class="fragment stacked" -->)
+
+[//]: # (<img src="./Agile Manifesto for Testing - v6.png" class="r-stretch" alt="" />  <!-- .element: class="fragment stacked" -->)
 
 <!-- first slide -->
 * Photo of a rusty car by <a href="https://unsplash.com/@meteorphoto">Peter Pryharski</a> on <a href="https://unsplash.com/photos/wrecked-white-volkswagen-beetle-coupe-on-grass-8zJSg57TBBA">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
@@ -449,8 +503,12 @@ Notes:
 * ["Dora the Explorer" by Håkan Dahlström on Wikimedia Commons (CC-BY 2.0)](https://commons.wikimedia.org/wiki/File:Dora_the_Explorer_(4844562834).jpg)
 <!-- 10. ROI -->
 * Photo of a "stop sign" by <a href="https://unsplash.com/@glennvillas">Glenn Villas</a> on <a href="https://unsplash.com/photos/a-red-off-limit-sign-hanging-from-a-rope-Z5jO59eYuqM">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
-<!-- 10. Conclusion -->
-* Photo of "end" word by <a href="https://unsplash.com/@markusspiske">Markus Spiske</a> on <a href="https://unsplash.com/photos/text-j2s9TffBQLk">Unsplash</a>
+* Photo of a Jenga tower by <a href="https://unsplash.com/@mparzuchowski">Michał Parzuchowski</a> on <a href="https://unsplash.com/photos/boy-playing-jenga-geNNFqfvw48">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+* Photo by <a href="https://unsplash.com/@steve_donoghue">Steve Donoghue</a> on <a href="https://unsplash.com/photos/man-riding-personal-watercraft-ynRImHi8LnY">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+* Photo of a scoubidou by <a href="https://unsplash.com/@tbk_10101">elia salibi</a> on <a href="https://unsplash.com/photos/a-person-holding-a-pair-of-glasses-X_dVxQf6Y2Q">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+<!-- Conclusion -->
+* Photo of "end" word by <a href="https://unsplash.com/@markusspiske">Markus Spiske</a> on <a href="https://unsplash.com/photos/text-j2s9TffBQLk">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+* Photo of a painting by <a href="https://unsplash.com/@anniespratt">Annie Spratt</a> on <a href="https://unsplash.com/photos/an-abstract-painting-with-orange-and-blue-colors-0ZPSX_mQ3xI">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
 <!-- cute bonus -->
 * Photo of a rabbit by [Степана](https://unsplash.com/@sgalagaev>Ансплэш) on [Unsplash](https://unsplash.com/photos/brown-rabbit-on-window-during-daytime--5iSCtrJX5o) (<a href="https://unsplash.com/license">Free licence</a>)
 
@@ -459,6 +517,8 @@ Notes:
 * TODO JULIEN: split on several pages
 
 ---
+
+<!-- .slide: data-background-image="./annie-spratt-0ZPSX_mQ3xI-unsplash.jpg" -->
 
 # Questions
 
@@ -495,10 +555,20 @@ Notes:
 
 ---
 
+<!-- .slide: data-background-image="./annie-spratt-0ZPSX_mQ3xI-unsplash.jpg" -->
+
 # Rappels des 10 points
 
-Notes:
-* TODO JULIEN
+1. Code testable et architecture testable
+2. TODO JULIEN outils adaptés
+3. TODO JULIEN test fiable
+4. Test everything, everywhere
+5. Maîtriser les défauts envoyés en prod
+6. Investir dans les tests autos
+7. Les niveaux de test
+8. TODO JULIEN Avoir confiance d'aller vite
+9. Apprendre
+10. Estimer le ROI
 
 ---
 
@@ -507,6 +577,8 @@ Notes:
 # Un lapin !
 
 ---
+
+<!-- .slide: data-background-image="./annie-spratt-0ZPSX_mQ3xI-unsplash.jpg" -->
 
 # Abstract
 
