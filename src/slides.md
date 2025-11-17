@@ -8,12 +8,8 @@
 }
 </style>
 
-<!-- .slide: data-background-image="./peter-pryharski-8zJSg57TBBA-unsplash.jpg" -->
-
+<!-- .slide: data-background-image="./pexels-almir-reis-1982745319-29059114.jpg" -->
 # Le test, grand oublié de l'Agilité ?
-
-Notes:
-* TODO ERIC: idée de meilleure illustration pour la slide de titre ?
 
 ---
 
@@ -141,24 +137,43 @@ Notes:
 
 ---
 
-# TODO: 2. outils adaptés : tooling et hardware (devices, RAM)
+<!-- .slide: data-background-image="./pexels-pixabay-162553.jpg" -->
+# 2. Les outils adaptés
+
+-v-
+
+## Du hardware
+
+<img src="./proac.jpg" alt=""/>
 
 Notes:
 * ERIC
-  * faire une slide avec images matériels etc
   * le DUT / du matériel -> les bornes, tests systèmes, des simus (hardware ou soft)
-  * un outil de gestion -> Jira (?)
+  * peu de matériel = bottleneck, beaucoup de matériel = multitasking plus efficace
+
+-v-
+
+## Du software
+
+<img src="./pexels-luis-gomes-166706-546819.jpg" class="r-stretch" alt="" />
+
+Notes:
+* ERIC
+  * un outil de gestion -> Jira
   * des moyens d'automatisation -> boardfarm, CI
-  * un framework de test -> RobotFramework (?)
+  * un framework de test -> RobotFramework
 * JULIEN: Thales
 
 ---
+<!-- .slide: data-background-image="./knot-1242654_1280.jpg" -->
+# 3. Fiabilité et maintenabilité des tests
 
-# TODO: 3. test fiable : fiabilité et maintenabilité des tests
+-v-
+
+<img src="./Flaky tests.jpg" class="r-stretch" alt="" />
 
 Notes:
 * ERIC: 
-  * faire une slide avec rf historic + graphes de tests qui passent qui fluctue
   * raconter anecdote tests à schneider
   * mettre des efforts pour la maintenance afin d'avoir peu de tests qui échouent pour permettre l'analyse rapide de la non régression
   * historisation de la visu des tests (cc Pinjon) pour trouver les flaky
@@ -194,10 +209,44 @@ Notes:
 
 ## Example Mapping
 
-<img src="./example_mapping_example.excalidraw.png" class="r-stretch" alt="" />  <!-- .element: class="fragment" -->
+<style>
+  .stacked {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    /*width: 80%;*/
+    /*height: auto;*/
+    z-index: 1;
+  }
+  .stacked.fragment {
+    z-index: 10; /* Chaque fragment aura un index plus élevé que le précédent */
+    animation: fadeIn 1s forwards; /* Animation de fade-in pour l'apparition des images */
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+
+![](./1example_mapping_example.excalidraw.jpg)  <!-- .element: class="fragment stacked r-stretch" -->
+![](./2example_mapping_example.excalidraw.jpg)  <!-- .element: class="fragment stacked r-stretch" -->
+![](./3example_mapping_example.excalidraw.jpg)  <!-- .element: class="fragment stacked r-stretch" -->
+![](./4example_mapping_example.excalidraw.jpg)  <!-- .element: class="fragment stacked r-stretch" -->
+
 
 Notes:
-* TODO ERIC: quoi dire dans cette section ? recommander le replay d'Alpes Craft https://www.youtube.com/watch?v=0Qlx7q1-GZA ?
+* ERIC:
+  * Faire travailler les 3 amigos grace à l'example mapping
+  * On travaille sur une feature (jaune)
+  * On définit les règles métiers (bleu)
+  * On illustre cela par des exemples (vert)
+  * PO/Dev/Test posent des questions pour que ça soit clair (rouge)
+  * => A la fin, on a des features claires, implémentables et testables
 
 -v-
 
@@ -242,10 +291,13 @@ Notes:
 
 ## Optimiser la collecte d'informations
 
-<img src="./thisisengineering-32PpagSzeGs-unsplash.jpg" class="r-stretch" alt="" />
+<!-- <img src="./thisisengineering-32PpagSzeGs-unsplash.jpg" class="r-stretch" alt="" /> -->
+<img src="./rapportmaintenance.jpg" class="r-stretch" alt="" />
 
 Notes:
-* ERIC: rapport de maintenance: utile pour les devs, pour les testeurs, pour le support, pour le client + slide
+* ERIC: rapport de maintenance: 
+  * utile pour récupérer logs, base de donneés, configuration et aider dans le débugage 
+  * aide le développeur pour débugguer, le testeur pour reproduire un bug, le support pour dépanner le client
 * la débuggabilité est une feature
 
 ---
@@ -278,8 +330,15 @@ Notes:
 
 Notes:
 * JULIEN: l'absence de test autos est une pente glissante : plus longtemps on attend, moins ils seront utiles, et plus ils couteront à mettre en place (car le projet ne les aura pas prévus), donc leur rentabilité s'effondre. Et on finit sur un projet qu'on oblige les devs à tester manuellement, laborieusement et à répétition. Non non, j'ai pas posé une démission pour ce motif il y a quelques mois.
-* TODO ERIC: si on n'a pas de temps mort-mou pour réparer au fur et à mesure ça se dégrade
-* TODO ERIC: en review, rappeller qu'il faut investir du temps humain dans les tests
+
+-v-
+
+<img src="./degradationtest.jpg" class="r-stretch" alt="" />
+
+Notes:
+* ERIC: 
+  * si on n'a pas de temps pour réparer au fur et à mesure ça se dégrade
+  * faire des rappels réguliers (en review, daily) que c'est important d'investir du temps
 
 ---
 
@@ -294,18 +353,22 @@ Notes:
 <img src="./helen-browne-0cw5y0iW490-unsplash.jpg" class="r-stretch" alt="" />
 
 Notes:
-* TODO ERIC: ex mauvaise répartition à cause de l'architecture du projet = trop de tests end-to-end sur hardware => perte de performance (un test = 5 min d'exec au lieu de 30s)
+* ERIC: ex mauvaise répartition à cause de l'architecture du projet = trop de tests end-to-end sur hardware => perte de performance (un test = 5 min d'exec au lieu de 30s)
 * JULIEN: Un bel exemple de pyramide ratée. Pour ma part, pour reprendre l'exemple de l'appli microservices sur lequel je travaillais, l'un deux était extrêmement complexe et critique, et donc avait le droit à des tests unitaires et de performance ciblés. Mais la plupart des autres faisaient du passe-plat, et donc était sommairement testés au niveau du composant. J'ai préféré mettre l'effort au niveau de l'intégration de tous les micro-services et de leur environnement, pour valider des scénarios métier de bout-en-bout. Et on essayait de faire quelques tests sur le prototype hardware, mais principalement du cas nominal. On n'était donc pas sur une pyramide, mais plutôt sur un magnum. C'est ce qui nous semblait le mieux adresser nos besoins et risques.
 * JULIEN: il ne faut pas suivre aveuglément la règle de faire des pyramides de test (comme il ne faut suivre aucune règle aveuglément). La pyramide c'est la forme décidée par la stratégie de test, qui se base sur les particularités du projet et de l'équipe qui le développe, à un moment donné. Donc il n'y en a pas deux pareilles, ça dépend. Et une bonne pyramide donne du bon feedback, permet un développement rapide.
 * transition vélocité/feedback
 
 ---
 
-# TODO: 8. Confiance d'aller vite
+<!-- .slide: data-background-image="./pexels-stywo-1110494.jpg" -->
+# 8. Confiance d'aller vite
+
+-v-
+
+<img src="./sm.jpg" class="r-stretch" alt="" />
 
 Notes:
 * ERIC: 
-  * faire slide
   * développement de l'iso est plus rapide grace au nightly + confiance d'avancer (même si on connait pas tout le produit, on a un garde fou eg: timeout iec)
   * si les features sont de plus en plus lentes ou difficiles à produire, ça casse l'itérativité
 * JULIEN: rapide à écrire, à lancer
@@ -321,11 +384,12 @@ Notes:
 
 ## Agilité
 
+<img src="./pexels-tima-miroshnichenko-5427819.jpg" class="r-stretch" alt="" />
+
 Notes:
-* TODO: image
 * ERIC: apprendre = la base de l'agilité (3ème mot du manifeste : "uncovering")
     * en rétro, décider de re-prioriser les tests ou la CI
-    * avant de développer, commencer par le projet à partir de ses tests
+    * anecdote: apprentissage de l'importance des tests à l'équipe, maintenant c'est eux qui font les remarques d'eux même
 
 -v-
 
@@ -346,8 +410,8 @@ Notes:
 # 10. Estimer le ROI
 
 Notes:
-* TODO ERIC: investissement constant requis, impression de ne pas dev
-* TODO ERIC : transition "des fois on a l'impression que ça ne sert à rien, des fois c'est vraiment le cas"
+* ERIC: investissement constant requis, impression de ne pas dev
+* transition "des fois on a l'impression que ça ne sert à rien, des fois c'est vraiment le cas"
 
 -v-
 
@@ -356,7 +420,7 @@ Notes:
 <img src="./michal-parzuchowski-geNNFqfvw48-unsplash.jpg" class="r-stretch" alt="" />
 
 Notes:
-* TODO ERIC: tests de cybersécurité, encore principalement manuels (audits, pentesters, analyse des remontées), l'outillage auto commence à apparaître, et l'IA émerge
+* ERIC: tests de cybersécurité, encore principalement manuels (audits, pentesters, analyse des remontées), l'outillage auto commence à apparaître, et l'IA émerge
 * JULIEN: Encore aujourd'hui il n'est pas fréquent ni toujours simple de tester l'ergonomie. Grâce au RGAA, des outils plutôt faciles à utiliser et efficace sont disponibles pour tester l'accessibilité web. Mais en-dehors du Web, ou pour l'UX en géénral, ça reste aujourd'hui compliqué de tester (il faut une personne UX, des utilisateurs, et beaucoup de temps).
 
 -v-
@@ -366,8 +430,8 @@ Notes:
 <img src="./steve-donoghue-ynRImHi8LnY-unsplash.jpg" class="r-stretch" alt="" />
 
 Notes:
-* TODO ERIC: 
-  * projet web dev, 6 mois en école : trop compliqué, donc manuel (coût d'apprentissage, de mise en place, code jetable ou POC)
+* ERIC: 
+  * projet web dev, 6 mois en école : coût d'apprentissage, de mise en place, code jetable ou POC = faire des tests manuels
   * puis automatisation après lorsqu'on se rend compte qu'on veut le maintenir sur la durée
 * TODO JULIEN: du code legacy difficile à tester en auto, beaucoup de retard, besoin urgent de mettre en prod : pas le choix, on va tester manuellement un peu, et croiser les doigts (et serrer les fesses)
 
@@ -378,7 +442,7 @@ Notes:
 <img src="./elia-salibi-X_dVxQf6Y2Q-unsplash.jpg" class="r-stretch" alt="" />
 
 Notes:
-* TODO ERIC: monkey testing, test manuel exploratoire
+* ERIC: monkey testing, test manuel exploratoire
 
 ---
 
