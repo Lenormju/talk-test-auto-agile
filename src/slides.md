@@ -57,7 +57,7 @@ Notes:
 
 <!-- .slide: data-background-image="./jerry-kavan-vv-oEGlN-4E-unsplash.jpg" -->
 
-# Introduction : objectifs
+# Introduction : (re)penser aux tests oubliés
 
 <img src="./Top_Ten_Logo.jpg" class="r-stretch" alt="" />  <!-- .element: class="fragment" -->
 
@@ -128,8 +128,8 @@ Notes:
 
 ## Architecturer la testabilité
 
-<img src="./chris-j-walker-CaleudV9jII-unsplash.jpg" alt="" />
-<img src="./engin-akyurt-M-NPViXH_do-unsplash.jpg" alt="" />
+<img src="./chris-j-walker-CaleudV9jII-unsplash.jpg" style="width: 900px" alt="" />
+<img src="./engin-akyurt-M-NPViXH_do-unsplash.jpg" style="width: 900px" alt="" />
 
 Notes:
 * JULIEN: une "bonne" archi, pas seulement en termes de testabilité, c'est la bonne adéquation de la solution actuelle aux besoins actuels et futurs. Pour les besoins actuels c'est déjà pas simple, pour les besoins futurs encore moins !
@@ -269,7 +269,17 @@ Notes:
 
 Notes:
 * JULIEN: je n'ai pas relu toutes les versions du Guide Scrum, mais il n'y est pas fait mention de Kanban. Et surtout, quelles colonnes mettre dans son Kanban ? Moi j'aime bien TODO/DOING/DONE. Car ça met l'emphase sur ce qui est EN COURS et ce qui est TERMINÉ. Et très simple de mettre une WIP-Limit. Mais souvent on va mettre plein de colonnes, pour décrire toutes les étapes de la production. Effectivement, ça permet de meixu voir le degré d'avancement des tickets. Mais qu'il y ait besoin de granularité dans l'avancement ça suppose que ces tickets sont longs à réaliser (premier red flag pour moi). Et qu'il y ait besoin d'avoir des étapes différentes, c'est souvent le signe que différentes personnes sont requises pour la traversée. Et que la responsabilité est divisée (donc personne n'est responsabla, aka chat perché). Et donc on découpe en fonction des personnes, on crée des silos. Pour moi, c'est un anti-pattern, qu'il faut combattre.
-* JULIEN: la Loi de Conway, c'est que "les organisations qui designent des systèmes sont forcées de produire des designs qui sont des copies des structures de communication de ces organisations". Autrement dit, si j'ai une équipe Frontend, une équipe Backend, et une équipe Base de Données, qu'importe le besoin, la solution aura la forme Frontend/Backend/Base de données. Ce qui est un énorme biais. Il faut donc penser les structures d'une organisation pour influer positivement sur les systèmes. D'où les "feature teams" : une équipe pluri-disciplinaire, indivisible, en charge de la réalisation bout-en-bout des solutions aux besoins métiers. On dirait la définition du Scrum Guide ! On ne devrait pas chercher à créer des verticales dans un kanban, mais des horizontales. 
+* JULIEN: la Loi de Conway, c'est que "les organisations qui designent des systèmes sont forcées de produire des designs qui sont des copies des structures de communication de ces organisations". Autrement dit, si j'ai une équipe Frontend, une équipe Backend, et une équipe Base de Données, qu'importe le besoin, la solution aura la forme Frontend/Backend/Base de données. Ce qui est un énorme biais. Il faut donc penser les structures d'une organisation pour influer positivement sur les systèmes. D'où les "feature teams" : une équipe pluri-disciplinaire, indivisible, en charge de la réalisation bout-en-bout des solutions aux besoins métiers. On dirait la définition du Scrum Guide ! On ne devrait pas chercher à créer des verticales dans un kanban, mais des horizontales.
+
+-v-
+
+## Avoir les moyens de ses ambitions
+
+<img src="./intouchables.jpg" class="r-stretch" alt="" />
+
+Notes:
+* JULIEN: "pas de bras, pas de chocolat". C'est pareil avec les tests ! Si on n'a pas le temps de s'y consacrer, pas les outils adaptés, pas la formation, pas la reconnaissance, ... bah ça ne va pas marcher. Il faut réunir les bonnes conditions pour réussir.
+* JULIEN: ça peut passer par se mettre d'accord en tant qu'équipe sur l'importance d'investir dans l'automatisation, et l'inscrire dans le Definition of Done. D'instaurer les "tres amigos" pour que les tests ne soient jamais oubliés. Peu importe : il faut manifester une volonté, réunir les moyens, et s'engager.
 
 ---
 
@@ -407,7 +417,7 @@ Notes:
 
 <!-- .slide: data-background-image="./glenn-villas-Z5jO59eYuqM-unsplash.jpg" -->
 
-# 10. Estimer le ROI
+# 10. Retour sur investissement ?
 
 Notes:
 * ERIC: investissement constant requis, impression de ne pas dev
@@ -508,26 +518,13 @@ Notes:
 * [[Podcast] If This Then Dev #327 - Fiabiliser l'usine logicielle, avec Geoffrey Berard](https://www.ifttd.io/episodes/fiabiliser-l-usine-logicielle) + sa version compilée "#327.exe" avec Louis Pinsard
 * [[Podcast] Developer Experience Opionated #3 - Comment penser les tests logiciels en 2025, avec Antoine Craske](https://podcast.ausha.co/developer-experience/antoine-craske)
 * [[Podcast] QG Qualité - Le QE Score chez Carrefour, avec Simon Champenois](https://www.ssid.fr/qe-score/)
+* l'IA pour le test
 
 ---
 
 <!-- .slide: data-background-image="./annie-spratt-0ZPSX_mQ3xI-unsplash.jpg" -->
 
 # Crédits photos
-
-[//]: # (<img src="./Agile Manifesto for Testing - v0.png" class="r-stretch" alt="" />  <!-- .element: class="fragment stacked" -->)
-
-[//]: # (<img src="./Agile Manifesto for Testing - v1.png" class="r-stretch" alt="" />  <!-- .element: class="fragment stacked" -->)
-
-[//]: # (<img src="./Agile Manifesto for Testing - v2.png" class="r-stretch" alt="" />  <!-- .element: class="fragment stacked" -->)
-
-[//]: # (<img src="./Agile Manifesto for Testing - v3.png" class="r-stretch" alt="" />  <!-- .element: class="fragment stacked" -->)
-
-[//]: # (<img src="./Agile Manifesto for Testing - v4.png" class="r-stretch" alt="" />  <!-- .element: class="fragment stacked" -->)
-
-[//]: # (<img src="./Agile Manifesto for Testing - v5.png" class="r-stretch" alt="" />  <!-- .element: class="fragment stacked" -->)
-
-[//]: # (<img src="./Agile Manifesto for Testing - v6.png" class="r-stretch" alt="" />  <!-- .element: class="fragment stacked" -->)
 
 <!-- first slide -->
 * Photo of a rusty car by <a href="https://unsplash.com/@meteorphoto">Peter Pryharski</a> on <a href="https://unsplash.com/photos/wrecked-white-volkswagen-beetle-coupe-on-grass-8zJSg57TBBA">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
@@ -550,6 +547,7 @@ Notes:
 * Image d'un Example Mapping, par Julien Lenormand, basé sur l'[exemple d'Arnaud Langlade](https://www.youtube.com/watch?v=0Qlx7q1-GZA)
 * Screenshot de code de Behavior-Driven Development, par [Dominik Szahidewicz](https://bugbug.io/blog/software-testing/8-steps-to-use-behavior-driven-development/)
 * [Photo of a Kanban board by Chris Huffman on Flickr (CC-BY-NC-ND 2.0)](https://www.flickr.com/photos/chrishuffman/2336990347)
+* Image du film "Intouchables" ([via TF1](https://x.com/TF1/status/541692601976782849))
 <!-- 5. test en aval -->
 * Photo de l'incendie du datacenter d'OVH (Copyright SAPEURS-POMPIERS DU BAS-RHIN)
 * Photo of monitoring by <a href="https://unsplash.com/@lukechesser">Luke Chesser</a> on <a href="https://unsplash.com/photos/graphs-of-performance-analytics-on-a-laptop-screen-JKUTrJ4vK00">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
