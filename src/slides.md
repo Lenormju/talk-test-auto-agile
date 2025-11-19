@@ -527,7 +527,7 @@ Notes:
 # Crédits photos
 
 <!-- first slide -->
-* Photo of a rusty car by <a href="https://unsplash.com/@meteorphoto">Peter Pryharski</a> on <a href="https://unsplash.com/photos/wrecked-white-volkswagen-beetle-coupe-on-grass-8zJSg57TBBA">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
+* Photo de Almir reis sur Pexels: https://www.pexels.com/fr-fr/photo/ruines-de-la-cite-antique-de-machu-picchu-au-perou-29059114/
 <!-- intro -->
 * ["Official logo for the Top Ten Professional Women and Leading Business Awards event" by Marjaree Mason Center on Wikimedia Commons (CC-BY-SA 4.0)](https://commons.wikimedia.org/wiki/File:Top_Ten_Logo.jpg)
 <!-- 1. Code-archi testable -->
@@ -539,7 +539,10 @@ Notes:
 * Photo of a cracked rock by <a href="https://unsplash.com/@braxted">Chris J Walker</a> on <a href="https://unsplash.com/photos/a-rock-with-a-crack-in-the-middle-of-it-CaleudV9jII">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
 * Photo of textile seam by <a href="https://unsplash.com/@enginakyurt">engin akyurt</a> on <a href="https://unsplash.com/photos/blue-denim-textile-with-white-button-M-NPViXH_do">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
 <!-- 2. outils -->
+* Photo de Pixabay sur Pexels: https://www.pexels.com/fr-fr/photo/jeu-de-cle-a-outils-162553/
+* Photo de luis gomes sur Pexels: https://www.pexels.com/fr-fr/photo/ordinateur-portable-noir-et-gris-546819/
 <!-- 3. fiabilité -->
+* Photo noeud https://pixabay.com/fr/photos/n%c5%93ud-validation-fixation-bleu-1242654/
 <!-- 4. test en amont -->
 * Image du film "Everything, Everywhere, All at Once" ([via Vanity Fair](https://www.vanityfair.com/hollywood/2022/04/everything-everywhere-all-at-once-movie-review))
 * Photo of a facepalm by <a href="https://unsplash.com/@silverkblack">Vitaly Gariev</a> on <a href="https://unsplash.com/photos/man-rubbing-his-face-in-front-of-laptop-bl7h_R-PKpU">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
@@ -560,7 +563,9 @@ Notes:
 * Photo of pyramids by <a href="https://unsplash.com/@osamaabosaadia">Osama Elsayed</a> on <a href="https://unsplash.com/photos/brown-pyramid-under-blue-sky-during-daytime-vqRMXgVtGXM">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
 * Photo of inverted pyramid by <a href="https://unsplash.com/@sherlocke">Helen Browne</a> on <a href="https://unsplash.com/photos/modernist-building-with-a-unique-inverted-pyramid-design-0cw5y0iW490">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
 <!-- 8. feedback -->
+* Photo de Stephan Seeber sur Pexels: https://www.pexels.com/fr-fr/photo/photographie-en-accelere-de-vehicules-sur-route-pendant-la-nuit-1110494/
 <!-- 9. DORA -->
+* Photo de Tima Miroshnichenko sur Pexels: https://www.pexels.com/fr-fr/photo/homme-en-veste-en-jean-bleu-jouant-de-la-guitare-5427819/
 * Photo of Spider-man reading by <a href="https://unsplash.com/@roadtripwithraj">Road Trip with Raj</a> on <a href="https://unsplash.com/photos/spider-man-leaning-on-concrete-brick-while-reading-book-o4c2zoVhjSw">Unsplash</a> (<a href="https://unsplash.com/license">Free licence</a>)
 * ["Dora the Explorer" by Håkan Dahlström on Wikimedia Commons (CC-BY 2.0)](https://commons.wikimedia.org/wiki/File:Dora_the_Explorer_(4844562834).jpg)
 <!-- 10. ROI -->
