@@ -631,13 +631,13 @@ Notes:
 # Rappels des 10 points
 
 1. Code testable et architecture testable
-2. TODO JULIEN outils adaptés
-3. TODO JULIEN test fiable
+2. Avoir des outils adaptés
+3. Maintenir des tests fiables
 4. Test everything, everywhere
 5. Maîtriser les défauts envoyés en prod
 6. Investir dans les tests autos
 7. Les niveaux de test
-8. TODO JULIEN Avoir confiance d'aller vite
+8. Avoir la confiance d'aller vite
 9. Apprendre
 10. Estimer le ROI
 
