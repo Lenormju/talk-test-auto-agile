@@ -651,7 +651,7 @@ Notes:
 
 <!-- .slide: data-background-image="./annie-spratt-0ZPSX_mQ3xI-unsplash.jpg" -->
 
-# Abstract
+# Abstract : Le test, grand oublié de l'Agilité ?
 
 Il est assez facile de voir comment l'Agilité permet d'aller vite, mais la Qualité ne découle pas aussi clairement de ses Valeurs ("Des logiciels opérationnels plus qu’une documentation exhaustive") et ses Principes ("Un logiciel opérationnel est la principale mesure d’avancement").
 On pensait en avoir fini avec le cycle en V, mais est-ce que garder le test comme une étape successive du dev n'est pas perpétuer les mêmes causes d'un même échec ?
@@ -660,5 +660,22 @@ On voudrait vous présenter une vision différente du Test, et surtout de commen
 * l'intégrer très en amont (#ShiftLeftTesting), par exemple dès le raffinement du besoin (#ExampleMapping et #BDD) ou lors de la phase de conception (#TestableDesign),
 * anticiper les besoins techniques (#TestOps),
 * éviter les défauts (#RightTheFirstTime et #Lean).
+
+Venez découvrir (au-delà des #buzzwords) d'autres approches du test, en partant de cas réels, et en cherchant toujours comment, concrétement, assurer un bon niveau de qualité sur nos projets.
+
+---
+
+<!-- .slide: data-background-image="./annie-spratt-0ZPSX_mQ3xI-unsplash.jpg" -->
+
+# Abstract : Faisons rimer Agilité, Qualité et Rapidité !
+
+Il est assez facile de voir comment l'Agilité permet d'aller vite, mais la Qualité ne découle pas aussi clairement de ses Valeurs ("Des logiciels opérationnels plus qu’une documentation exhaustive") et ses Principes ("Un logiciel opérationnel est la principale mesure d’avancement").
+Le focus des méthodologies est souvent sur le trio PO/SM/devs, au détriment du troisième amigos : les testeurs. Comment les intégrer à une démarche plus agile (produit/dev/ops), et sans en faire un facteur limitant ?
+
+On voudrait vous présenter une vision différente du Test, et surtout de comment l'intégrer à nos processus Agiles :
+* l'intégrer très en amont (#ShiftLeftTesting), par exemple dès le raffinement du besoin (#ExampleMapping et #BDD) ou lors de la phase de conception (#TestableDesign), jusqu'à très en aval (#DevOps),
+* anticiper les besoins techniques (#TestOps),
+* éviter les défauts (#RightTheFirstTime et #Lean),
+* appliquer des principes d'ingénierie logicielle au test auto (#First),
 
 Venez découvrir (au-delà des #buzzwords) d'autres approches du test, en partant de cas réels, et en cherchant toujours comment, concrétement, assurer un bon niveau de qualité sur nos projets.
