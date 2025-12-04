@@ -9,13 +9,9 @@
 </style>
 
 <!-- .slide: data-background-image="./pexels-almir-reis-1982745319-29059114.jpg" -->
-# Le test, grand oublié de l'Agilité ?
+# Faisons rimer Agilité, Qualité et Rapidité !
 
 ---
-
-<!-- .slide: data-background-image="./Agile Grenoble - slide sponsor 2025-11-15.png" -->
-
--v-
 
 <!-- .slide: data-background-image="./Agile Genève - slide sponsor QA.png" -->
 
@@ -455,6 +451,23 @@ Notes:
 
 Notes:
 * ERIC: monkey testing, test manuel exploratoire
+
+---
+
+<!-- .slide: data-background-image="./annie-spratt-0ZPSX_mQ3xI-unsplash.jpg" -->
+
+# Rappels des 10 points
+
+1. Code testable et architecture testable
+2. Avoir des outils adaptés
+3. Maintenir des tests fiables
+4. Test everything, everywhere
+5. Maîtriser les défauts envoyés en prod
+6. Investir dans les tests autos
+7. Les niveaux de test
+8. Avoir la confiance d'aller vite
+9. Apprendre
+10. Estimer le ROI
 
 ---
 
